@@ -1,0 +1,60 @@
+.header {
+    font-family: 'Alegreya Sans', sans-serif;    
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 95px;
+}
+
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    width: 915px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__item {
+    display: flex;
+    margin-right: 27px;
+    transition: 0.3;
+}
+
+.menu__item:hover {
+    color: #E01F3D;
+}
+
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.contacts {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.contacts__phone{
+    transition: 0.3;    
+}
+
+.contacts__phone:hover {
+    color:#E01F3D;
+}
+
+.contacts__img {
+    margin-right: 6px;
+}

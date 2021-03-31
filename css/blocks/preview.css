@@ -1,0 +1,88 @@
+.preview__general {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.preview__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;    
+    line-height: 108%;
+    text-transform: uppercase;
+    max-width: 400px;
+    margin-bottom: 24px;
+}
+
+.preview__descr {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    max-width: 332px;
+    line-height: 120%;
+    margin-bottom: 33px;
+}
+
+.advantages__list {    
+    display: flex;
+}
+
+.advantages__item {
+    width: 166px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item:last-child {
+    margin-right: 0;
+}
+
+.advantages__descr {
+    width: 114px;
+    margin-bottom: 0;
+}
+
+.beats__main {
+    transform: translate(47%, -98%);
+}
+
+.pagination {
+    transform: translate(105%, -443%);
+}
+
+.pagination__item {
+    width: 18px;
+    height: 18px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 3px;
+}
+
+.pagination__link:hover {
+    background: #E01F3D;
+    opacity: 1;
+}
+.pagination__link {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #292929;
+    opacity: 0.6;
+    transition: 0.3;
+}
+
+.pagination__item--active{
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E01F3D;
+    border-radius: 50%;
+}
+.pagination__item--active .pagination__link {
+    background: #E01F3D;
+    opacity: 1;
+}
