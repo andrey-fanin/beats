@@ -54,21 +54,21 @@
                         <h1 class="preview__title">Беспроводные наушники Beats Solo 3</h1>
                         <p class="preview__descr">Встречайте новую версию наушников из линейки Powerbeats.</p>
                         <button class="button__primary">Заказать</button>
+                        <ul class="advantages__list">
+                            <li class="advantages__item">
+                                <img src="./images/content/listening.png" alt="listening">
+                                <p class="advantages__descr">Безупречный звук</з>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="./images/content/battery.png" alt="battery">
+                                <p class="advantages__descr">До 40 часов работы</p>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="./images/content/charger.png" alt="charger">
+                                <p class="advantages__descr">Технология Fast Fuel</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="advantages__list">
-                        <li class="advantages__item">
-                            <img src="./images/content/listening.png" alt="listening">
-                            <p class="advantages__descr">Безупречный звук</з>
-                        </li>
-                        <li class="advantages__item">
-                            <img src="./images/content/battery.png" alt="battery">
-                            <p class="advantages__descr">До 40 часов работы</p>
-                        </li>
-                        <li class="advantages__item">
-                            <img src="./images/content/charger.png" alt="charger">
-                            <p class="advantages__descr">Технология Fast Fuel</p>
-                        </li>
-                    </ul>
                     <div class="beats__main">
                         <img src="/images/content/beats-main.png" alt="beats main logo">
                     </div>
@@ -103,7 +103,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
             </section>
             <section class="strengths">
                 <div class="container container__strengths">
@@ -135,9 +134,99 @@
                         </li>
                     </ul>                        
                     </div>
-                </div>
             </section>
-            <section class="content"></section>
+            <section class="reviews">
+                <div class="container container__reviews">
+                    <h1 class="reviews__title">Отзывы</h1>
+                    <div class="review__item">
+                        <div class="reviewer__photo">
+                            <img src="./images/users/belyash.jpg" alt="Billie Eilish" class="user__img">
+                        </div>
+                        <div class="review__text">
+                            <div class="review__text__title">Отличный звук</div>
+                            <div class="review__descr">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.</div>
+                            <div class="review__username">Билли Айлиш</div>
+                        </div>
+                    </div>
+                    <ul class="reviewers__list">
+                        <li class="reviewers__item reviewers__item--active">
+                            <img src="./images/users/belyash.jpg" alt="Билли Айлиш" class="reviewer__img">
+                        </li>
+                        <li class="reviewers__item">
+                            <img src="./images/users/vadim_grachev.jpg" alt="Вадим Грачёв" class="reviewer__img">
+                        </li>
+                        <li class="reviewers__item">
+                            <img src="./images/users/mari_orlova.jpg" alt="Мария Орлова" class="reviewer__img">
+                        </li>
+                    </ul>
+                </div>
+            </section>      
+            <section class="order__form">
+                <div class="container container__form">
+                    <h1 class="order__form__title">Закажите доставку</h1>
+                    <div class="form">
+                        <div class="form__column">
+                            <div class="form__row">
+                                <div class="form__block">
+                                    <div class="form__block__title">Имя</div>
+                                    <input type="text" class="type__form">
+                                </div>
+                                <div class="form__block">
+                                    <div class="form__block__title">Телефон</div>
+                                    <input type="text" class="type__form">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__block">
+                                    <div class="form__block__title">Улица</div>
+                                    <input type="text" class="type__form">
+                                </div>                            
+                            </div>
+                            <div class="form__row">
+                                <div class="form__block">
+                                    <div class="form__block__title">Дом</div>
+                                    <input type="text" class="type__form">
+                                </div>                                                        
+                                <div class="form__block">
+                                    <div class="form__block__title">Корпус</div>
+                                    <input type="text" class="type__form">
+                                </div>                                                        
+                                <div class="form__block">
+                                    <div class="form__block__title">Квартира</div>
+                                    <input type="text" class="type__form">
+                                </div>                                                        
+                                <div class="form__block">
+                                    <div class="form__block__title">Этаж</div>
+                                    <input type="text" class="type__form">
+                                </div>                                                        
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__block form__block--comment">
+                                <div class="form__block__title">Комментарий</div>
+                                <textarea type="text" class="type__comment"></textarea>
+                            </div>
+                            <ul class="form__radiobuttons">
+                                <li class="form__radiobutton__item">
+                                    <label class="form__radio"><input type="radio" class="form__radiobutton" name="payment" value="yes">  Потребуется сдача</label>
+                                </li>
+                                <li class="form__radiobutton__item">
+                                    <label class="form__radio"><input type="radio" class="form__radiobutton" name="payment" value="no" checked>  Оплата картой</label>
+                                </li>
+                            </ul>
+                            <label><input type="checkbox" class="order__checkbox" checked>  Не перезванивать</label>
+                            <ul class="buttons__form">
+                                <li class="button__form">
+                                    <button class="button__primary">Заказать</button>
+                                </li>
+                                <li class="button__form">
+                                    <button class="button">Очистить</button>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>
+            </section>      
         </div>
     </div>
 </body>

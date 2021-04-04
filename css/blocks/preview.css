@@ -6,13 +6,9 @@
 }
 
 .preview__title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;    
-    line-height: 108%;
-    text-transform: uppercase;
     max-width: 400px;
     margin-bottom: 24px;
+    text-align: left;
 }
 
 .preview__descr {
@@ -46,11 +42,10 @@
 }
 
 .beats__main {
-    transform: translate(47%, -98%);
 }
 
 .pagination {
-    transform: translate(105%, -443%);
+    transform: translate(310% ,17%);
 }
 
 .pagination__item {
