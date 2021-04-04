@@ -1,3 +1,6 @@
+.container__form{
+    width: 940px;
+}
 
 .order__form {
     display: flex;
@@ -17,7 +20,8 @@
     border-width: 30px 17px 0;
     border-style: solid;
     border-color:  #E01F3D transparent;
-    left: 4px;
+    left: 86px;
+    bottom: 12px;
 }
 
 .order__form::before {
@@ -29,8 +33,12 @@
     border-width: 0 29px 27px;
     border-style: solid;
     border-color: transparent transparent  #E01F3D;
-    left: 977px;
+    left: 1002px;
     bottom: 27px;
+}
+
+.order__form::before,.order__form::after{
+    transform: rotate(344deg);
 }
 
 .container__form {
@@ -156,6 +164,7 @@
 .order__checkbox {
     margin-bottom: 48px;
     margin-right: 11px;
+    display: none;
 }
 
 .order__checkbox::after {
@@ -179,7 +188,7 @@
 .button__form {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 .button__form:last-child {
@@ -192,4 +201,69 @@
     border: none;
     cursor: pointer;
     outline: none;
+}
+
+
+
+
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;
+    margin-bottom: 19px;
+}
+
+.form__controls:last-of-type{
+    margin-bottom: 44px;
+}
+
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.radio:last-child{
+    margin-right: 0;
+}
+
+.radio__elem {
+    display: none;
+}
+
+.radio__elem:checked ~ .radio__visible::before{
+    display: block;
+}
+
+.radio__visible {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    margin-right: 10px;
+}
+
+.radio__visible::before {
+    display: none;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #E01F3D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio--checkbox > .radio__visible{
+    border-radius: 4px;
+}
+
+.radio--checkbox > .radio__visible::before{
+    background: url(../../images/symbol/Vector.png) center center no-repeat;
 }

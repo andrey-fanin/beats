@@ -206,21 +206,31 @@
                                 <div class="form__block__title">Комментарий</div>
                                 <textarea type="text" class="type__comment"></textarea>
                             </div>
-                            <ul class="form__radiobuttons">
-                                <li class="form__radiobutton__item">
-                                    <label class="form__radio"><input type="radio" class="form__radiobutton" name="payment" value="yes">  Потребуется сдача</label>
-                                </li>
-                                <li class="form__radiobutton__item">
-                                    <label class="form__radio"><input type="radio" class="form__radiobutton" name="payment" value="no" checked>  Оплата картой</label>
-                                </li>
-                            </ul>
-                            <label><input type="checkbox" class="order__checkbox" checked>  Не перезванивать</label>
+                            <div class="form__controls">
+                                <label class="radio">
+                                    <input type="radio" class="radio__elem" name="payment">
+                                    <div class="radio__visible"></div>
+                                    <div class="radio__title">Потребуется сдача</div>
+                                </label>                                
+                                <label class="radio">
+                                    <input type="radio" class="radio__elem" name="payment">
+                                    <div class="radio__visible"></div>
+                                    <div class="radio__title">Оплата по карте</div>
+                                </label>
+                            </div>
+                            <div class="form__controls">
+                                <label class="radio radio--checkbox">
+                                    <input type="checkbox" class="radio__elem" name="payment" value="no" checked>
+                                    <div class="radio__visible"></div>
+                                    <div class="radio__title">Оплата по карте</div>
+                                </label>
+                            </div>
                             <ul class="buttons__form">
                                 <li class="button__form">
-                                    <button class="button__primary">Заказать</button>
+                                    <input type="submit" value="Заказать" class="button__primary">
                                 </li>
                                 <li class="button__form">
-                                    <button class="button">Очистить</button>
+                                    <input type="reset" value="Очистить" class="button">
                                 </li>
                             </ul>
                         </div>                        

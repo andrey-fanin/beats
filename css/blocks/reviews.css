@@ -27,17 +27,19 @@
 }
 
 .reviewer__photo {
-    margin-right: 40px;;
+    margin-right: 39px;
 }
 
 .review__item {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 57px;
+    padding: 0 27px;
 }
 
-
+.review__text {
+    padding: 33px 0 0;
+}
 
 .review__text__title {
     font-style: normal;
@@ -54,7 +56,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 118%;
+    line-height: 119%;
     max-width: 498px;
     color: #666666;
     margin-bottom: 38px;
