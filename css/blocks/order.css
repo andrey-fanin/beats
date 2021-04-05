@@ -221,6 +221,18 @@
     margin-right: 0;
 }
 
+.button--transparent {
+    background: none;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none; 
+    text-transform: none;
+    font-size: 16px;
+}
+
 .radio__elem {
     display: none;
 }
