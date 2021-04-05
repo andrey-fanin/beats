@@ -21,7 +21,11 @@
     margin-bottom: 33px;
 }
 
-.advantages__list {    
+.preview__button {
+    margin-bottom: 67px;
+}
+
+.preview__advantages--list {    
     display: flex;
 }
 
@@ -43,7 +47,9 @@
 
 
 .pagination {
-    transform: translate(339% ,17%);
+    position: fixed;
+    top: 242px;
+    right: 193px;
 }
 
 .pagination__item {
@@ -53,6 +59,10 @@
     align-items: center;
     justify-content: center; 
     margin-bottom: 3px;
+}
+
+.pagination__item:last-child {
+    margin-bottom: 0;
 }
 
 .pagination__link:hover {

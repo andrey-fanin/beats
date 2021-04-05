@@ -91,6 +91,10 @@
     margin-bottom: 38px;
 }
 
+.form__block:nth-last-child(1) {
+    margin-right: 0;
+}
+
 .form__block__title {
     font-style: normal;
     font-weight: normal;
@@ -192,17 +196,6 @@
 .button__form:last-child {
     margin-right: 0;
 }
-
-.button {
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-
-
-
 
 
 .form__controls {

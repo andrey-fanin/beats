@@ -81,6 +81,7 @@
     margin-right: 6px;    
     overflow: hidden;
     border-radius: 50%;
+    border: 4px transparent;
     cursor: pointer;
 }
 
