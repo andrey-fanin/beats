@@ -83,15 +83,13 @@
     flex-direction: column;
 }
 
-.form__block:last-child {
+.form__block--comment {
+    margin-bottom: 38px;
+    max-height: 152px;
     margin-right: 0;
 }
 
-.form__block--comment {
-    margin-bottom: 38px;
-}
-
-.form__block:nth-last-child(1) {
+.form__block:nth-last-of-type(1) {
     margin-right: 0;
 }
 
