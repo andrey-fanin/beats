@@ -1,273 +1,278 @@
-.container__form{
-    width: 94rem;
+.container__form {
+  width: 94rem;
 }
 
 .order__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    color: white;
-    padding: 6.8rem 0 8.5rem;
-    background: url(../../images/bg/bg-order.png) center bottom no-repeat;
-    background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: white;
+  padding: 6.8rem 0 8.5rem;
+  background: url(../../images/bg/bg-order.png) center bottom no-repeat;
+  background-size: 100%;
 }
 
 .order__form::after {
-    display: block;
-    content: "";
-    position: relative;
-    width: 5.8rem;
-    border-width: 3.2rem 1.3rem 0;
-    border-style: solid;
-    border-color: #E01F3D transparent;
-    left: 2rem;
-    bottom: 37.1rem;
-    transform: rotate(326deg);
+  display: block;
+  content: "";
+  position: relative;
+  width: 5.8rem;
+  border-width: 3.2rem 1.3rem 0;
+  border-style: solid;
+  border-color: #E01F3D transparent;
+  left: 2rem;
+  bottom: 37.1rem;
+  transform: rotate(326deg);
 }
 
 .order__form::before {
-    display: block;
-    content: "";
-    position: relative;
-    height: 0rem;
-    width: 0rem;
-    border: 2.1rem solid transparent;
-    border-left: 2rem solid #E01F3D;
-    border-top: 2rem solid #E01F3D;
-    left: 100.2rem;
-    bottom: 38.2rem;
-    transform: rotate(11deg);
+  display: block;
+  content: "";
+  position: relative;
+  height: 0rem;
+  width: 0rem;
+  border: 2.1rem solid transparent;
+  border-left: 2rem solid #E01F3D;
+  border-top: 2rem solid #E01F3D;
+  left: 100.2rem;
+  bottom: 38.2rem;
+  transform: rotate(11deg);
 }
 
 /* .order__form::before,.order__form::after{
     transform: rotate(344deg);
 } */
-
 .container__form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .order__form__title {
-    margin-bottom: 5.8rem;
+  margin-bottom: 5.8rem;
 }
 
 .form {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .form__column {
-    display: flex;
-    flex-direction: column;
-    margin-right: 2.7rem;
-    flex: 1;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2.7rem;
+  flex: 1;
+  width: 50%;
+  font-size: 1.4rem;
+  line-height: 143%;
 }
 
 .form__column:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .form__row {
-    margin-bottom: 1.1rem;
-    display: flex;
+  margin-bottom: 1.1rem;
+  display: flex;
 }
 
 .form__row:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form__block {
-    display: flex;
-    margin-right: 1.7rem;
-    flex: 1 1 100%;
-    flex-direction: column;
+  display: flex;
+  margin-right: 1.7rem;
+  flex: 1 1 100%;
+  flex-direction: column;
 }
 
 .form__block--comment {
-    margin-bottom: 3.8rem;
-    max-height: 15.2rem;
-    margin-right: 0;
+  margin-bottom: 3.8rem;
+  max-height: 15.2rem;
+  margin-right: 0;
 }
 
 .form__block:nth-last-of-type(1) {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .form__block__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 119%;    
-    margin-bottom: 0.6rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 119%;
+  margin-bottom: 0.6rem;
 }
 
 .type__form {
-    display: flex;
-    border-radius: 0.4rem;
-    flex: 1;
-    height: 5.8rem;    
-    padding: 1.8rem 1.2rem;
-    width: 100%;
-    outline: none;
-    border: 0.3rem solid transparent;
+  display: flex;
+  border-radius: 0.4rem;
+  flex: 1;
+  height: 5.8rem;
+  padding: 1.8rem 1.2rem;
+  width: 100%;
+  outline: none;
+  border: 0.3rem solid transparent;
 }
 
 .type__form:focus {
-    border: 0.3rem solid #E01F3D;
+  border: 0.3rem solid #E01F3D;
 }
 
 .form__radiobuttons {
-    margin-bottom: 1.9rem;
-    display: flex;
+  margin-bottom: 1.9rem;
+  display: flex;
 }
 
 .type__comment {
-    display: flex;
-    width: 100%;
-    flex: 1;
-    min-height: 15.2rem;
-    resize: none;
-    border: 0.3rem solid transparent;
-    border-radius: 0.4rem;
-    outline: none;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  min-height: 15.2rem;
+  resize: none;
+  padding: 1.8rem 1.2rem;
+  border: 0.3rem solid transparent;
+  border-radius: 0.4rem;
+  outline: none;
 }
 
 .type__comment:focus {
-    border: 0.3rem solid #E01F3D;
+  border: 0.3rem solid #E01F3D;
 }
 
-
 .form__radiobutton__item {
-    margin-right: 1.6rem;
-    display: flex;
-    align-items: center;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
 }
 
 .form__radiobutton__item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .form__radiobutton {
-    display: none;
+  display: none;
 }
 
 .form__radiobutton__item::before {
-    display: block;
-    content: "";
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: white;
-    margin-right: 1rem;
+  display: block;
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  margin-right: 1rem;
 }
 
 .order__checkbox {
-    margin-bottom: 4.8rem;
-    margin-right: 1.1rem;
-    display: none;
+  margin-bottom: 4.8rem;
+  margin-right: 1.1rem;
+  display: none;
 }
 
 .order__checkbox::after {
-    display: block;
-    content: "";
-    width: 2.4rem;
-    height: 2.4rem;
-    background: white;
-    border-radius: 0.4rem;
+  display: block;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: white;
+  border-radius: 0.4rem;
 }
 
 .order__checkbox:checked.order__checkbox::after {
-    background: red;
+  background: red;
 }
 
 .buttons__form {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .button__form {
-    display: flex;
-    align-items: center;
-    margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
 }
 
 .button__form:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
-
 
 .form__controls {
-    display: flex;
-    flex-wrap: wrap;    
-    align-items: center;
-    margin-bottom: 1.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.9rem;
 }
 
-.form__controls:last-of-type{
-    margin-bottom: 4.4rem;
+.form__controls:last-of-type {
+  margin-bottom: 4.4rem;
 }
 
 .radio {
-    display: flex;
-    cursor: pointer;
-    user-select: none;
-    margin-right: 1.6rem;
-    align-items: center;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  margin-right: 1.6rem;
+  align-items: center;
+}
+.radio__title {
+  font-size: 1.6rem;
+  line-height: 119%;
 }
 
-.radio:last-child{
-    margin-right: 0;
+.radio:last-child {
+  margin-right: 0;
 }
 
 .button--transparent {
-    background: none;
-    font-weight: normal;
-    font-style: normal;
-    color: white;
-    border: none;
-    cursor: pointer;
-    outline: none; 
-    text-transform: none;
-    font-size: 1.6rem;
+  background: none;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-transform: none;
+  font-size: 1.6rem;
 }
 
 .radio__elem {
-    display: none;
+  display: none;
 }
 
-.radio__elem:checked ~ .radio__visible::before{
-    display: block;
+.radio__elem:checked ~ .radio__visible::before {
+  display: block;
 }
 
 .radio__visible {
-    width: 2.6rem;
-    height: 2.6rem;
-    position: relative;
-    border-radius: 50%;
-    background: white;
-    margin-right: 1.0rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  position: relative;
+  border-radius: 50%;
+  background: white;
+  margin-right: 1rem;
 }
 
 .radio__visible::before {
-    display: none;
-    content: "";
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    background: #E01F3D;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: none;
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: #E01F3D;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.radio--checkbox > .radio__visible{
-    border-radius: 0.4rem;
+.radio--checkbox > .radio__visible {
+  border-radius: 0.4rem;
 }
 
-.radio--checkbox > .radio__visible::before{
-    background: url(../../images/symbol/Vector.png) center center no-repeat;
+.radio--checkbox > .radio__visible::before {
+  background: url(../../images/symbol/Vector.png) center center no-repeat;
 }

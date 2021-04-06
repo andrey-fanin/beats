@@ -20,10 +20,10 @@ h1, h2 {
   margin: 0;
 }
 
-h1 {  
+h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 4.8rem;    
+  font-size: 4.8rem;
   line-height: 108%;
   text-transform: uppercase;
   text-align: center;
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  font-family: 'Play', sans-serif;  
+  font-family: "Play", sans-serif;
   color: #292929;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,7 +54,7 @@ p {
 
 .wrapper {
   min-height: 100%;
-  min-width: 110rem;  
+  min-width: 110rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -77,6 +77,8 @@ section {
 .container__preview {
   display: flex;
   align-items: center;
+  min-height: 47rem;
+  background: url(../../../images/content/beats-main.png) right center/50% auto no-repeat;
 }
 
 .preview {
@@ -84,8 +86,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;  
-  background: #F5F5F5;
+  justify-content: space-between;
+  background: #f5f5f5;
 }
 
 .content {
@@ -103,11 +105,9 @@ section {
   line-height: 112%;
   outline: 0;
   cursor: pointer;
-
   text-transform: uppercase;
   transition: 0.3;
 }
-
-.button__primary:hover {
-  background-color: #ff2042;
+.button:hover {
+  filter: brightness(1.1);
 }
