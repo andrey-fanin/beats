@@ -78,7 +78,7 @@ section {
   display: flex;
   align-items: center;
   min-height: 47rem;
-  background: url('/images/content/beats-main.png') right center/50% auto no-repeat;
+  background: url("/images/content/beats-main.png") right center/50% auto no-repeat;
 }
 
 .preview {
