@@ -77,7 +77,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -136,6 +136,7 @@ sup {
  */
 img {
   border-style: none;
+  max-width: 100%;
 }
 
 /* Forms

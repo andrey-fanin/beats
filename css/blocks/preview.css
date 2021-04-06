@@ -41,6 +41,7 @@
 
 .advantages__descr {
   width: 11.4rem;
+  font-size: 1.6rem;
   margin-bottom: 0;
 }
 
@@ -48,6 +49,7 @@
   position: fixed;
   top: 31%;
   right: 14%;
+  z-index: 100;
 }
 
 .pagination__item {
