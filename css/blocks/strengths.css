@@ -47,7 +47,7 @@
   font-size: 1.6rem;
   line-height: 118%;
   color: #666;
-  width: 59rem;
+  padding: 0 20%;
   text-align: center;
 }
 
@@ -60,14 +60,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 6.5rem;
+  padding: 0 3.25rem;
 }
-
 .strengths__item:last-child {
-  margin-right: 0;
+  padding-right: 0;
+}
+.strengths__item:first-child {
+  padding-left: 0;
 }
 
-.strengths__item--img {
+.strengths__item-img {
   width: 12.8rem;
   height: 12.8rem;
   border-radius: 50%;
@@ -78,7 +80,7 @@
   background: #F2F5F4;
 }
 
-.strengths__item--title {
+.strengths__item-title {
   font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
@@ -89,7 +91,7 @@
   width: 27.6rem;
 }
 
-.strengths__item--descr {
+.strengths__item-descr {
   font-style: normal;
   font-weight: normal;
   font-size: 1.6rem;
