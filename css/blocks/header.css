@@ -1,15 +1,17 @@
+html {font-size: 10px;}
+
 .header {
     font-family: 'Alegreya Sans', sans-serif;    
-    font-size: 18px;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
-    margin-bottom: 95px;
+    margin-bottom: 9.5rem;
 }
 
 .container__header {
     display: flex;
     justify-content: space-between;
-    width: 915px;
+    width: 91.5rem;
 }
 
 .menu {
@@ -24,7 +26,7 @@
 
 .menu__item {
     display: flex;
-    margin-right: 27px;
+    margin-right: 2.7rem;
     transition: 0.3;
 }
 
@@ -40,7 +42,7 @@
     font-family: 'Play';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,5 +58,5 @@
 }
 
 .contacts__img {
-    margin-right: 6px;
+    margin-right: 0.6rem;
 }

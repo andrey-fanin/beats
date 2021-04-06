@@ -2,12 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 70px;
 }
 
 .preview__title {
-    max-width: 400px;
-    margin-bottom: 24px;
+    max-width: 40rem;
+    margin-bottom: 2.4rem;
     text-align: left;
 }
 
@@ -15,23 +14,23 @@
     font-family: 'Alegreya Sans';
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
-    max-width: 332px;
+    font-size: 2.1rem;
+    max-width: 33.2rem;
     line-height: 120%;
-    margin-bottom: 33px;
+    margin-bottom: 3.3rem;
 }
 
 .preview__button {
-    margin-bottom: 67px;
+    margin-bottom: 6.7rem;
 }
 
-.preview__advantages--list {    
+.advantages__list {    
     display: flex;
 }
 
 .advantages__item {
-    width: 166px;
-    margin-right: 8px;
+    width: 16.6rem;
+    margin-right: 0.8rem;
     display: flex;
     justify-content: space-between;
 }
@@ -41,24 +40,26 @@
 }
 
 .advantages__descr {
-    width: 114px;
+    width: 11.4rem;
     margin-bottom: 0;
 }
 
 
 .pagination {
     position: fixed;
-    top: 242px;
-    right: 193px;
+    top: 24.2rem;
+    right: 19.3rem;
 }
 
 .pagination__item {
-    width: 18px;
-    height: 18px; 
+    width: 1.8rem;
+    height: 1.8rem; 
     display: flex;
     align-items: center;
     justify-content: center; 
-    margin-bottom: 3px;
+    margin-bottom: 0.3rem;
+    border: 0.1rem solid transparent;
+    border-radius: 50%;
 }
 
 .pagination__item:last-child {
@@ -71,8 +72,8 @@
 }
 .pagination__link {
     display: block;
-    width: 6px;
-    height: 6px;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
     background: #292929;
     opacity: 0.6;
@@ -80,11 +81,9 @@
 }
 
 .pagination__item--active{
-    width: 18px;
-    height: 18px;
-    border: 1px solid #E01F3D;
-    border-radius: 50%;
+    border-color: #E01F3D;    
 }
+
 .pagination__item--active .pagination__link {
     background: #E01F3D;
     opacity: 1;

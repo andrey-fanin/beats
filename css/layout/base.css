@@ -23,7 +23,7 @@ h1, h2 {
 h1 {  
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;    
+  font-size: 4.8rem;    
   line-height: 108%;
   text-transform: uppercase;
   text-align: center;
@@ -54,7 +54,7 @@ p {
 
 .wrapper {
   min-height: 100%;
-  min-width: 1100px;  
+  min-width: 110rem;  
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -62,7 +62,7 @@ p {
 
 .wrapper__content {
   flex: 1;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   background: white;
 }
 
@@ -71,19 +71,20 @@ section {
 }
 
 .container {
-  width: 915px;
+  width: 91.5rem;
 }
 
 .container__preview {
   display: flex;
+  align-items: center;
 }
 
 .preview {
-  padding: 24px 0 67px;
+  padding: 2.4rem 0 6.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  
+  justify-content: space-between;  
   background: #F5F5F5;
 }
 
@@ -92,13 +93,13 @@ section {
 }
 
 .button {
-  padding: 21px 41px;
-  border-radius: 100px;
+  padding: 2.1rem 4.1rem;
+  border-radius: 10rem;
   border: 0;
   background-color: #E01F3D;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 112%;
   outline: 0;
   cursor: pointer;
