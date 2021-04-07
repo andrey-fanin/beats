@@ -58,6 +58,7 @@ p {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
 .wrapper__content {
@@ -117,10 +118,15 @@ section {
   }
 
   .strengths__list {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 
   .strengths__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 0;
     flex-wrap: wrap;
   }
