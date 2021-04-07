@@ -50,17 +50,17 @@
 }
 
 .socials__item--fb {
-  background: url(/images/logo/soc/fb.svg) center center no-repeat;
+  background: url(../../images/logo/soc/fb.svg) center center no-repeat;
 }
 
 .socials__item--vk {
-  background: url(/images/logo/soc/vk.svg) center center no-repeat;
+  background: url(../../images/logo/soc/vk.svg) center center no-repeat;
 }
 
 .socials__item--in {
-  background: url(/images/logo/soc/in.svg) center center no-repeat;
+  background: url(../../images/logo/soc/in.svg) center center no-repeat;
 }
 
 .socials__item--tg {
-  background: url(/images/logo/soc/tg.svg) center center no-repeat;
+  background: url(../../images/logo/soc/tg.svg) center center no-repeat;
 }
