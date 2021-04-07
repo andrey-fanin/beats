@@ -24,10 +24,6 @@
   flex-direction: column;
 }
 
-.reviewer__photo {
-  margin-right: 3.9rem;
-}
-
 .review__item {
   display: flex;
   justify-content: flex-start;
@@ -60,7 +56,6 @@
   font-size: 2.4rem;
   line-height: 116%;
   color: #292929;
-  text-align: left;
   margin-bottom: 2.7rem;
 }
 
