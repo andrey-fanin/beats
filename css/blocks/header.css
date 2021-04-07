@@ -12,7 +12,7 @@ html {
 .container__header {
   display: flex;
   justify-content: space-between;
-  width: 91.5rem;
+  width: 91rem;
 }
 
 .menu {

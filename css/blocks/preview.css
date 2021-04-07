@@ -29,7 +29,7 @@
 }
 
 .advantages__item {
-  width: 16.6rem;
+  width: 100%;
   margin-right: 0.8rem;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,6 @@
 
 .advantages__descr {
   width: 11.4rem;
-  font-size: 1.6rem;
   margin-bottom: 0;
 }
 
@@ -49,7 +48,6 @@
   position: fixed;
   top: 31%;
   right: 14%;
-  z-index: 100;
 }
 
 .pagination__item {
