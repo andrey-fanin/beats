@@ -36,12 +36,10 @@
 .strengths__head {
   margin-bottom: 6.5rem;
 }
-
-.strengths__head__title {
+.strengths__head-title {
   margin-bottom: 1.8rem;
 }
-
-.strengths__head__descr {
+.strengths__head-descr {
   font-style: normal;
   font-weight: normal;
   font-size: 1.6rem;
@@ -51,14 +49,13 @@
   text-align: center;
 }
 
-.strengths__item-img {
+.strengths__item-image {
   width: 12.8rem;
   height: 12.8rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2.4rem;
   background: #F2F5F4;
 }
 

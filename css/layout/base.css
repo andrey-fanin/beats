@@ -54,36 +54,39 @@ p {
 
 .wrapper {
   min-height: 100%;
-  min-width: 110rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
 }
-
 .wrapper__content {
   flex: 1;
   background: white;
 }
 
-section {
-  height: 100vh;
-}
-
 .container {
-  width: 91.5rem;
-}
-
-.container__preview {
+  width: 95%;
+  max-width: 91rem;
+  justify-content: center;
   display: flex;
+  margin: 0 auto;
+}
+.container__preview {
   align-items: center;
+  justify-content: space-between;
+}
+.container__advantages {
+  justify-content: flex-start;
+}
+.container__map {
+  max-width: none;
 }
 
 .preview {
   padding: 2.4rem 0 6.7rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   background: #f5f5f5;
 }
@@ -108,147 +111,4 @@ section {
 }
 .button:hover {
   filter: brightness(1.1);
-}
-
-@media (min-width: 320px) {
-  html {
-    font-size: 6px;
-  }
-
-  .container__preview {
-    flex-direction: column-reverse;
-    padding: 3rem 0;
-  }
-
-  .preview__general {
-    align-items: center;
-    text-align: center;
-  }
-
-  .preview__beats {
-    margin-bottom: 2rem;
-  }
-
-  .advantages__list {
-    justify-content: center;
-  }
-
-  .strengths__list {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  .strengths__item {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-    flex-wrap: wrap;
-  }
-  .strengths__item:last-child {
-    padding-bottom: 0;
-  }
-  .strengths__item:first-child {
-    padding-top: 0;
-  }
-  .strengths__item-text {
-    text-align: left;
-  }
-
-  .review__item {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .reviewer__photo {
-    margin-right: 0;
-  }
-
-  .form__column {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .order__form {
-    flex-direction: column;
-  }
-
-  .form__controls, .form__buttons {
-    justify-content: center;
-  }
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 7px;
-  }
-
-  .strengths__list {
-    flex-direction: row;
-  }
-
-  .strengths__item {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    padding: 0 3.25rem;
-    text-align: center;
-  }
-  .strengths__item:last-child {
-    padding-right: 0;
-  }
-  .strengths__item:first-child {
-    padding-left: 0;
-  }
-  .strengths__item-text {
-    text-align: center;
-  }
-
-  .review__item {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .reviewer__photo {
-    margin-right: 3.9rem;
-  }
-
-  .order__form {
-    flex-direction: row;
-  }
-
-  .form__column {
-    width: 50%;
-  }
-
-  .form__controls, .form__buttons {
-    justify-content: flex-start;
-  }
-}
-@media (min-width: 992px) {
-  html {
-    font-size: 8px;
-  }
-}
-@media (min-width: 1200px) {
-  html {
-    font-size: 10px;
-  }
-
-  .container__preview {
-    flex-direction: row;
-  }
-
-  .preview__general {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .preview__title {
-    text-align: left;
-  }
-
-  .advantages__list {
-    justify-content: flex-start;
-  }
 }

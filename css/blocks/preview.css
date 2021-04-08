@@ -18,17 +18,11 @@
   margin-bottom: 3.3rem;
 }
 
-.preview__button {
-  margin-bottom: 6.7rem;
-}
-
 .preview__beats {
-  width: 47rem;
-  height: 47rem;
+  max-width: 100%;
 }
 
 .advantages__list {
-  display: flex;
   font-size: 1.6rem;
 }
 
@@ -38,7 +32,6 @@
   display: flex;
   justify-content: space-between;
 }
-
 .advantages__item:last-child {
   margin-right: 0;
 }
@@ -53,7 +46,6 @@
   top: 31%;
   right: 14%;
 }
-
 .pagination__item {
   width: 1.8rem;
   height: 1.8rem;
@@ -64,16 +56,12 @@
   border: 0.1rem solid transparent;
   border-radius: 50%;
 }
-
+.pagination__item--active {
+  border-color: #E01F3D;
+}
 .pagination__item:last-child {
   margin-bottom: 0;
 }
-
-.pagination__link:hover {
-  background: #E01F3D;
-  opacity: 1;
-}
-
 .pagination__link {
   display: block;
   width: 0.6rem;
@@ -83,9 +71,9 @@
   opacity: 0.6;
   transition: 0.3;
 }
-
-.pagination__item--active {
-  border-color: #E01F3D;
+.pagination__link:hover {
+  background: #E01F3D;
+  opacity: 1;
 }
 
 .pagination__item--active .pagination__link {

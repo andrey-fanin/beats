@@ -44,9 +44,19 @@
                             </ul>
                         </nav>      
                         <address class="contacts">
-                            <img class="contacts__img" src="./images/content/phone.png" alt="phone">
+                            <div class="contacts__img">
+                                <svg width=15 height=15>
+                                    <use xlink:href="./images/svg/sprite.svg#phone">
+                                    </use>
+                                </svg>
+                            </div>
                             <a href="tel:8 800 903 90 90" class="contacts__phone">8 800 903 90 90</a>
-                        </address>         
+                        </address> 
+                        <a href="#" class="hamburger">
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
+                        </a>        
                     </div>
                 </header>
                 <div class="container container__preview">
@@ -62,15 +72,30 @@
                 <div class="container container__advantages">
                     <ul class="advantages__list">
                         <li class="advantages__item">
-                            <img src="./images/content/listening.png" alt="listening">
+                            <div class="avantages__item-image">
+                                <svg width=60 height=60>
+                                    <use xlink:href="./images/svg/sprite.svg#listening">
+                                    </use>
+                                </svg>
+                            </div>
                             <p class="advantages__descr">Безупречный звук</з>
                         </li>
                         <li class="advantages__item">
-                            <img src="./images/content/battery.png" alt="battery">
+                            <div class="avantages__item-image">
+                                <svg width=60 height=60>
+                                    <use xlink:href="./images/svg/sprite.svg#battery">
+                                    </use>
+                                </svg>
+                            </div>
                             <p class="advantages__descr">До 40 часов работы</p>
                         </li>
                         <li class="advantages__item">
-                            <img src="./images/content/charger.png" alt="charger">
+                            <div class="avantages__item-image">
+                                <svg width=60 height=60>
+                                    <use xlink:href="./images/svg/sprite.svg#charger">
+                                    </use>
+                                </svg>
+                            </div>
                             <p class="advantages__descr">Технология Fast Fuel</p>
                         </li>
                     </ul>
@@ -79,13 +104,16 @@
             <section class="strengths">
                 <div class="container container__strengths">
                     <div class="strengths__head">
-                        <h1 class="strengths__head__title">Почему Beats Solo 3?</h1>
-                        <p class="strengths__head__descr">Процессор W1 работает невероятно эффективно и позволяет легко подключать наушники к различным устройствам Apple.</p>
+                        <h1 class="strengths__head-title">Почему Beats Solo 3?</h1>
+                        <p class="strengths__head-descr">Процессор W1 работает невероятно эффективно и позволяет легко подключать наушники к различным устройствам Apple.</p>
                     </div>
                     <ul class="strengths__list">
                         <li class="strengths__item">
-                            <div class="strengths__item-img">
-                                <img src="./images/content/battery-big.png" alt="big battery">
+                            <div class="strengths__item-image">
+                                <svg width=68 height=68>
+                                    <use xlink:href="./images/svg/sprite.svg#strengths__battery">
+                                    </use>
+                                </svg>
                             </div>
                             <div class="strengths__item-text">
                                 <div class="strengths__item-title">40 часов работы</div>
@@ -93,8 +121,11 @@
                             </div>
                         </li>
                         <li class="strengths__item">
-                            <div class="strengths__item-img">
-                                <img src="./images/content/volume.png" alt="volume">
+                            <div class="strengths__item-image">
+                                <svg width=68 height=68>
+                                    <use xlink:href="./images/svg/sprite.svg#volume">
+                                    </use>
+                                </svg>
                             </div>
                             <div class="strengths__item-text">
                                 <div class="strengths__item-title">Фирменное звучание</div>
@@ -102,8 +133,11 @@
                             </div>
                         </li>
                         <li class="strengths__item">
-                            <div class="strengths__item-img">
-                                <img src="./images/content/timer.png" alt="timer">
+                            <div class="strengths__item-image">
+                                <svg width=68 height=68>
+                                    <use xlink:href="./images/svg/sprite.svg#timer">
+                                    </use>
+                                </svg>
                             </div>
                             <div class="strengths__item-text">
                                 <div class="strengths__item-title">Быстрая зарядка</div>
@@ -206,7 +240,7 @@
                                 <label class="radio radio--checkbox">
                                     <input type="checkbox" class="radio__elem" name="payment" value="no" checked>
                                     <div class="radio__visible"></div>
-                                    <div class="radio__title">Оплата по карте</div>
+                                    <div class="radio__title">Не перезванивать</div>
                                 </label>
                             </div>
                             <ul class="form__buttons">
@@ -236,7 +270,12 @@
                 <address class="contacts contacts--footer">
                     <span class="contacts__direction">Москва, ул.Новый Арбат, д.31/12</span>
                     <div class="contacts__number">
-                        <img class="contacts__img" src="./images/content/phone.png" alt="phone">
+                        <div class="contacts__img">
+                            <svg width=15 height=15>
+                                <use xlink:href="./images/svg/sprite.svg#phone">
+                                </use>
+                            </svg>
+                        </div>
                         <a href="tel:8 800 903 90 90" class="contacts__phone">8 800 903 90 90</a>
                     </div>
                 </address>  
