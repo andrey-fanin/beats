@@ -39,23 +39,11 @@
   margin-right: 1rem;
   width: 30px;
   height: 30px;
+  transition: 0.3s;
 }
 .socials__item:last-child {
   margin-right: 0;
 }
-
-.socials__item--fb {
-  background: url(../../images/svg/soc/fb.svg) center center no-repeat;
-}
-
-.socials__item--vk {
-  background: url(../../images/svg/soc/vk.svg) center center no-repeat;
-}
-
-.socials__item--in {
-  background: url(../../images/svg/soc/in.svg) center center no-repeat;
-}
-
-.socials__item--tg {
-  background: url(../../images/svg/soc/tg.svg) center center no-repeat;
+.socials__item:hover {
+  fill: #b3b3b3;
 }

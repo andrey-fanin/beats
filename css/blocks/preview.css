@@ -4,7 +4,6 @@
 }
 
 .preview__title {
-  max-width: 40rem;
   margin-bottom: 2.4rem;
 }
 
@@ -19,7 +18,7 @@
 }
 
 .preview__beats {
-  max-width: 100%;
+  width: 49rem;
 }
 
 .advantages__list {

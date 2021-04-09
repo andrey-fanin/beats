@@ -1,11 +1,19 @@
 @media (min-width: 1px) {
   html {
-    font-size: 7px;
+    font-size: 7.5px;
   }
 
   .container__preview {
     flex-direction: column-reverse;
     padding: 3rem 0 9.7rem;
+  }
+
+  .container__header {
+    align-items: center;
+  }
+
+  .header > .container__header {
+    max-width: none;
   }
 
   .menu, .contacts {
@@ -21,8 +29,12 @@
     text-align: center;
   }
 
+  .preview__title {
+    max-width: 40rem;
+  }
+
   .preview__beats {
-    margin-bottom: 2rem;
+    margin-bottom: 9rem;
   }
 
   .advantages__list {
@@ -48,10 +60,10 @@
   }
   .strengths__item-text {
     text-align: left;
+    width: 25rem;
   }
-  .strengths__item-img {
+  .strengths__item-image {
     margin-bottom: 0;
-    margin-right: 2rem;
   }
 
   .review__item {
@@ -67,6 +79,7 @@
 
   .reviewer__photo {
     margin-right: 0;
+    width: 130px;
   }
 
   .form__column {
@@ -79,10 +92,6 @@
   }
 
   .order__form {
-    flex-direction: column;
-  }
-
-  .form__controls {
     flex-direction: column;
   }
 
@@ -108,14 +117,36 @@
     margin-bottom: 1rem;
   }
 }
+@media (min-width: 480px) {
+  .strengths__item-image {
+    margin-right: 12px;
+  }
+}
 @media (min-width: 768px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
+  }
+
+  .header > .container__header {
+    max-width: 91rem;
+    align-items: flex-start;
   }
 
   .menu, .contacts {
     display: flex;
     align-items: center;
+  }
+
+  .menu {
+    margin: 0 30px;
+  }
+  .menu__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .preview__title {
+    max-width: 66rem;
   }
 
   .hamburger {
@@ -129,8 +160,14 @@
   .strengths__item {
     flex-wrap: nowrap;
     flex-direction: column;
-    padding: 0 3.25rem;
+    padding: 0;
     text-align: center;
+  }
+  .strengths__item-title {
+    width: auto;
+  }
+  .strengths__item-descr {
+    width: auto;
   }
   .strengths__item:last-child {
     padding-right: 0;
@@ -141,7 +178,7 @@
   .strengths__item-text {
     text-align: center;
   }
-  .strengths__item-img {
+  .strengths__item-image {
     margin-right: 0;
     margin-bottom: 2.4rem;
   }
@@ -162,15 +199,27 @@
   .footer__col--align--left {
     margin-bottom: 0;
   }
+
+  .order__form {
+    padding: 0 10rem;
+  }
+
+  .form__controls {
+    justify-content: flex-start;
+  }
 }
 @media (min-width: 992px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 @media (min-width: 1200px) {
   html {
     font-size: 10px;
+  }
+
+  .preview__title {
+    max-width: 40rem;
   }
 
   .review__item {
@@ -180,6 +229,7 @@
 
   .reviewer__photo {
     margin-right: 3.9rem;
+    width: 253px;
   }
 
   .order__form {
@@ -226,5 +276,13 @@
 
   .contacts--footer {
     align-items: flex-start;
+  }
+
+  .strengths__item {
+    padding: 0 3.25rem;
+  }
+
+  .order__form {
+    padding: 0;
   }
 }
