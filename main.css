@@ -1110,6 +1110,7 @@ template {
 @media screen and (max-width: 480px) {
   .container__order {
     padding: 0 1rem;
+    width: 95%;
   }
 }
 
@@ -1325,6 +1326,7 @@ template {
   .form__controls {
     justify-content: center;
     margin-bottom: 3.9rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -1411,7 +1413,7 @@ template {
 }
 
 .radio--checkbox > .radio__visible::before {
-  background: url(./images/symbol/Vector.png) center center no-repeat;
+  background: url(../../images/symbol/Vector.png) center center no-repeat;
 }
 
 .footer {
