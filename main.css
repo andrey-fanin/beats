@@ -1411,7 +1411,7 @@ template {
 }
 
 .radio--checkbox > .radio__visible::before {
-  background: url(../../images/symbol/Vector.png) center center no-repeat;
+  background: url(./images/symbol/Vector.png) center center no-repeat;
 }
 
 .footer {
