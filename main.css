@@ -58,10 +58,8 @@ p {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 480px) {
-  body p {
-    font-size: 3.2rem;
-  }
+section {
+  height: 100%;
 }
 
 .wrapper {
@@ -873,7 +871,7 @@ template {
     padding-top: 0;
   }
   .strengths__item-text {
-    width: 68%;
+    width: 52%;
     text-align: left;
   }
   .strengths__item-image {
@@ -1480,6 +1478,7 @@ template {
   .contacts--footer {
     align-items: center;
     font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1497,11 +1496,6 @@ template {
 .contacts__number {
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 480px) {
-  .contacts__number {
-    margin-bottom: 2rem;
-  }
 }
 
 .socials {
@@ -1558,8 +1552,16 @@ template {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: inline-flex;
+    position: fixed;
+    top: 9%;
+    left: 92%;
   }
   .hamburger__plank {
     display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hamburger {
+    top: 6%;
   }
 }
