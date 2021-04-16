@@ -1558,7 +1558,7 @@ template {
   .hamburger {
     display: inline-flex;
     position: fixed;
-    top: 8%;
+    top: 5%;
     right: 5%;
   }
   .hamburger__plank {
