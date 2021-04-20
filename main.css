@@ -1126,6 +1126,180 @@ template {
   }
 }
 
+.team {
+  padding: 7.3rem 0 5.1rem;
+}
+
+.container__team {
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__title {
+  margin-bottom: 5.3rem;
+}
+
+.team__list {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .team__list {
+    flex-direction: column;
+  }
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 6rem) / 4);
+  margin-right: 2rem;
+  text-align: center;
+}
+.team__item:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.active > .team__text {
+  max-height: 100vh;
+}
+.active > .team__name::after {
+  border: 8px solid transparent;
+  border-bottom: 10px solid #E01F3D;
+  top: -0.2rem;
+}
+@media screen and (max-width: 768px) {
+  .active > .team__name::after {
+    border-bottom: 10px solid #365A49;
+  }
+}
+@media screen and (max-width: 480px) {
+  .active > .team__name::after {
+    top: -0.1rem;
+    border-bottom: 10px solid #E01F3D;
+  }
+}
+@media screen and (max-width: 768px) {
+  .active > .team__img {
+    height: 29rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .active {
+    margin-bottom: 2rem;
+  }
+}
+
+.team__img {
+  margin-bottom: 2.5rem;
+  transition: 0.7s;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .team__img {
+    height: 0;
+    order: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__img {
+    max-width: 22rem;
+  }
+}
+
+.team__name {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 117%;
+  margin-bottom: 1.1rem;
+  position: relative;
+  cursor: pointer;
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  .team__name {
+    order: 0;
+    font-size: 2.1rem;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__name {
+    font-size: 2.8rem;
+  }
+}
+.team__name::after {
+  display: block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border: 8px solid transparent;
+  border-top: 10px solid #E01F3D;
+  position: absolute;
+  top: 0.7rem;
+  right: -2.3rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .team__name::after {
+    border-top: 10px solid #365A49;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__name::after {
+    top: 1.1rem;
+    right: -3rem;
+    border-top: 10px solid #E01F3D;
+  }
+}
+
+.team__text {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.7s;
+}
+@media screen and (max-width: 768px) {
+  .team__text {
+    order: 2;
+  }
+}
+
+.team__position {
+  font-size: 1.6rem;
+  line-height: 118%;
+}
+@media screen and (max-width: 768px) {
+  .team__position {
+    margin-bottom: 1.3rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__position {
+    font-size: 2.4rem;
+  }
+}
+
+.team__descr {
+  font-size: 1.6rem;
+  max-width: 22rem;
+  line-height: 118%;
+  color: #666;
+}
+@media screen and (max-width: 480px) {
+  .team__descr {
+    font-size: 2.1rem;
+    max-width: 43rem;
+  }
+}
+
 .reviews {
   padding: 6.8rem 0 6.3rem;
 }
@@ -1777,7 +1951,7 @@ template {
   justify-content: center;
 }
 
-.hamburger {
+.burger {
   display: none;
   width: 24px;
   height: 20px;
@@ -1786,39 +1960,39 @@ template {
   z-index: 1000;
   transition: 0.4s;
 }
-.hamburger__plank {
+.burger__plank {
   display: none;
   background: #292929;
   height: 4px;
   border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
-  .hamburger {
+  .burger {
     display: inline-flex;
     position: fixed;
     top: 5%;
     right: 5%;
   }
-  .hamburger__plank {
+  .burger__plank {
     display: block;
   }
 }
 @media screen and (max-width: 480px) {
-  .hamburger {
+  .burger {
     top: 6%;
   }
 }
-.hamburger > svg {
+.burger > svg {
   display: none;
 }
-.hamburger--active > .hamburger__plank {
+.burger--active > .burger__plank {
   display: none;
 }
-.hamburger--active > svg {
+.burger--active > svg {
   display: block;
 }
 
-.hamburger-menu {
+.burger-menu {
   color: white;
   background-color: #313131;
   width: 100vw;
@@ -1831,25 +2005,25 @@ template {
   overflow: auto;
   transition: 0.4s;
 }
-.hamburger-menu__list {
+.burger-menu__list {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.hamburger-menu__item {
+.burger-menu__item {
   white-space: nowrap;
 }
-.hamburger-menu--active {
+.burger-menu--active {
   bottom: 0;
 }
 
-.container__hamburger-menu {
+.container__burger-menu {
   padding: 4.2rem;
   display: flex;
   flex-direction: column;
 }
 
-.hamburger-menu__close {
+.burger-menu__close {
   display: flex;
   font-size: 0px;
   justify-content: flex-end;

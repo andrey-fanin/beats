@@ -251,6 +251,58 @@
                     </div>
                 </div>
             </section>
+            <section class="team">
+                <div class="container container__team">
+                    <h1 class="team__title">Команда</h1>
+                    <ul class="team__list">
+                        <li class="team__item">
+                            <div class="team__img">
+                                <img src="./images/team/bf.jpg" alt="team photo">
+                            </div>
+                            <div class="team__name">Борис Федорович</div>
+                            <div class="team__text">
+                                <div class="team__position">Главный технолог</div>
+                                <div class="team__descr">Отвечает за вкусовые качества
+                                    и калорийность.
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img">
+                                <img src="./images/team/ai.jpg" alt="team photo">
+                            </div>
+                            <div class="team__name">Алла Иванова</div>
+                            <div class="team__text">
+                                <div class="team__position">Специалист по упаковке</div>
+                                <div class="team__descr">Автор запоминающегося стиля
+                                    наших батончиков.</div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img">
+                                <img src="./images/team/km.jpg" alt="team photo">
+                            </div>
+                            <div class="team__name">Кирилл Матросов</div>
+                            <div class="team__text">
+                                <div class="team__position">Оператор</div>
+                                <div class="team__descr">Разработал дизайн
+                                    наушников beats solo 3.</div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__img">
+                                <img src="./images/team/mr.jpg" alt="team photo">
+                            </div>
+                            <div class="team__name">Мила Рыжкова</div>
+                            <div class="team__text">
+                                <div class="team__position">PR, маркетинг</div>
+                                <div class="team__descr">По всем вопросам сотрудничества
+                                    и рекламы писать только Миле.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="reviews">
                 <div class="container container__reviews">
                     <h1 class="reviews__title">Отзывы</h1>
@@ -449,28 +501,31 @@
             </li>
         </ul>
     </div>
-    <a href="#" class="hamburger">
-        <span class="hamburger__plank"></span>
-        <span class="hamburger__plank"></span>
-        <span class="hamburger__plank"></span>
+    <a href="#" class="burger">
+        <span class="burger__plank"></span>
+        <span class="burger__plank"></span>
+        <span class="burger__plank"></span>
         <svg width="20" height="20" fill=white>                
-            <use xlink:href="./images/svg/sprite.svg#hamburger-menu__closer">
+            <use xlink:href="./images/svg/sprite.svg#burger-menu__closer">
             </use>
         </svg>
     </a>   
-    <section class="hamburger-menu">
-        <div class="container container__hamburger-menu">
-            <ul class="hamburger-menu__list">
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">О нас</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Наушники</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Команда</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Цены</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Отзывы</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Как мы работаем</a></li>
-                <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Контакты</a></li>
+    <section class="burger-menu">
+        <div class="container container__burger-menu">
+            <ul class="burger-menu__list">
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">О нас</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Наушники</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Команда</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Цены</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Отзывы</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Как мы работаем</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Контакты</a></li>
             </ul>
         </div>
     </section>     
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/carousel-accordion.js"></script>
+    <script src="./scripts/order-form.js"></script>
 </body>
 </html>

@@ -1,16 +1,16 @@
-let burger  = document.querySelector('.hamburger');
-let overlay = document.querySelector('.hamburger-menu');
-let closer = document.querySelector('.hamburger-menu__closer');
+let burger  = document.querySelector('.burger');
+let overlay = document.querySelector('.burger-menu');
+let closer = document.querySelector('.burger-menu__closer');
 
-let links = document.querySelectorAll('.hamburger-menu__link');
+let links = document.querySelectorAll('.burger-menu__link');
 
 links.forEach(function(element){
   element.addEventListener('click' , toggleMenu);
 })
 
 function toggleMenu(){
-  burger.classList.toggle('hamburger--active');
-  overlay.classList.toggle('hamburger-menu--active');
+  burger.classList.toggle('burger--active');
+  overlay.classList.toggle('burger-menu--active');
   closer.classList.toggle('closer');
 }
 
