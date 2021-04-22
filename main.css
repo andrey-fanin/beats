@@ -58,10 +58,6 @@ p {
   margin-bottom: 0;
 }
 
-section {
-  height: 100%;
-}
-
 .wrapper {
   height: 100%;
   width: 100%;
@@ -898,6 +894,7 @@ template {
 .container__slider {
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .container__slider {
@@ -905,29 +902,20 @@ template {
   }
 }
 
+.slider__list {
+  display: flex;
+  position: relative;
+}
+
 .slider__arrow {
   cursor: pointer;
-}
-.slider__arrow:first-child {
-  margin-right: 3.3rem;
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow:first-child {
-    margin-right: 0;
-  }
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 .slider__arrow:nth-last-of-type(1) {
   transform: scale(-1, 1);
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow:nth-last-of-type(1) {
-    right: 14%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .slider__arrow:nth-last-of-type(1) {
-    right: -5%;
-  }
+  right: 0;
 }
 @media screen and (max-width: 768px) {
   .slider__arrow {
@@ -943,11 +931,12 @@ template {
   }
 }
 
-.slider__content {
+.slider__item {
   display: flex;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .slider__content {
+  .slider__item {
     flex-direction: column;
     align-items: center;
   }
@@ -955,6 +944,7 @@ template {
 
 .slider-content__beats {
   margin-right: 5.9rem;
+  width: 45rem;
 }
 @media screen and (max-width: 768px) {
   .slider-content__beats {
@@ -1316,6 +1306,7 @@ template {
 }
 .reviews__title {
   margin-bottom: 3.4rem;
+  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   .reviews__title {
@@ -1331,18 +1322,28 @@ template {
   max-width: none;
 }
 
+.review__list {
+  position: relative;
+}
+
 .review__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: flex-start;
   margin-bottom: 1rem;
   padding: 4.2rem;
   background: #F8FAF9;
   overflow: hidden;
-  position: relative;
   flex-direction: row;
   text-align: left;
   width: 100%;
   max-width: 94rem;
+  opacity: 0;
+  transition: 0.4s;
 }
 .review__item::before {
   content: "";
@@ -1370,6 +1371,11 @@ template {
   .review__item {
     margin-bottom: 14rem;
   }
+}
+.review__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 
 .reviewer__photo {
@@ -1449,6 +1455,7 @@ template {
   border-radius: 50%;
   border: 0.4rem solid transparent;
   cursor: pointer;
+  transition: 0.4s;
 }
 .reviewers__item:last-child {
   margin-right: 0;
@@ -1462,6 +1469,9 @@ template {
     height: 10rem;
     margin-right: 9px;
   }
+}
+.reviewers__item:hover {
+  border-color: #E01F3D;
 }
 
 .reviewer__img {
