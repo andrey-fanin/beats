@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">    
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="main.css">    
     <title>Beats</title>
 </head>
 <body>
@@ -146,9 +146,9 @@
             </section>
             <section class="slider">
                 <div class="container container__slider" id="slider">
-                    <div class="slider__arrow" id="left">
+                    <a href="#" class="slider__arrow slider__arrow--left">
                         <img src="./images/symbol/arrow.png" alt="prev">
-                    </div>
+                    </a>
                     <ul class="slider__list">
                         <li class="slider__item">
                             <div class="slider-content__beats">
@@ -348,9 +348,9 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="slider__arrow" id="right">
+                    <a href="#" class="slider__arrow slider__arrow--right">
                         <img src="./images/symbol/arrow.png" alt="next">
-                    </div>
+                    </a>
                 </div>
             </section>
             <section class="team">
@@ -593,7 +593,17 @@
                 </div>
             </section>   
         </div>
-    </div>   
+    </div>  
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__content">
+                Сообщение отправлено
+            </div>
+            <div class="modal__button-container">
+                <a href="#" class="button js-close-modal btn--theme-green">Закрыть</a>
+            </div>
+        </div>
+    </div> 
     <div class="pagination">
         <ul class="pagination__list">
             <li class="pagination__item pagination__item--active">
@@ -648,11 +658,13 @@
         </div>
     </section>     
     <script src="./scripts/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
-    <script src="./scripts/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./scripts/burger.js"></script>
     <script src="./scripts/carousel-accordion.js"></script>
     <script src="./scripts/slider.js"></script>
     <script src="./scripts/order-form.js"></script>
     <script src="./scripts/slideshow.js"></script>
+    <script src="./scripts/modal.js"></script>
 </body>
 </html>
