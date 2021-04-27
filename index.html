@@ -489,7 +489,7 @@
                 <div class="container container__order">
                     <h2 class="order__title">Закажите доставку</h2>
                     <form class="order__form" id="myForm">
-                        <input type="hidden" name="email" value="kud1ato@gmail.com">
+                        <input type="hidden" name="to" value="kud1ato@gmail.com">
                         <div class="form__column">
                             <div class="form__row">
                                 <div class="form__block">
@@ -506,14 +506,14 @@
                             <div class="form__row">
                                 <div class="form__block">
                                     <div class="form__block-title">Улица</div>
-                                    <input type="text" class="type__form" name="street" required>
+                                    <input type="text" class="type__form" name="street">
                                     <div class="error"></div>
                                 </div>                            
                             </div>
                             <div class="form__row">
                                 <div class="form__block">
                                     <div class="form__block-title">Дом</div>
-                                    <input type="text" class="type__form" name="house" required>
+                                    <input type="text" class="type__form" name="house">
                                     <div class="error"></div>
                                 </div>                                                        
                                 <div class="form__block">
@@ -522,12 +522,12 @@
                                 </div>                                                        
                                 <div class="form__block">
                                     <div class="form__block-title">Квартира</div>
-                                    <input type="text" class="type__form" name="flat" required>
+                                    <input type="text" class="type__form" name="flat">
                                     <div class="error"></div>
                                 </div>                                                        
                                 <div class="form__block">
                                     <div class="form__block-title">Этаж</div>
-                                    <input type="text" class="type__form" name="floor" required>
+                                    <input type="text" class="type__form" name="floor">
                                     <div class="error"></div>
                                 </div>                                                        
                             </div>
@@ -535,17 +535,17 @@
                         <div class="form__column">
                             <div class="form__block form__block--comment">
                                 <div class="form__block-title">Комментарий</div>
-                                <textarea type="text" class="type__comment" name="comment"></textarea>
+                                <textarea type="text" class="type__comment" name="comment" required></textarea>
                             </div>
                             <div class="form__controls">
                                 <label class="radio">
-                                    <input type="radio" class="radio__elem" name="payment" value="giveBack"required>
+                                    <input type="radio" class="radio__elem" name="payment" value="giveBack">
                                     <div class="error"></div>
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Потребуется сдача</div>
                                 </label>                                
                                 <label class="radio">
-                                    <input type="radio" class="radio__elem" name="payment" value="byCard" required>
+                                    <input type="radio" class="radio__elem" name="payment" value="byCard">
                                     <div class="error"></div>
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Оплата по карте</div>
@@ -636,7 +636,7 @@
                 Сообщение отправлено
             </div>
             <div class="modal__button-container">
-                <a href="#" class="button js-close-modal btn--theme-green">Закрыть</a>
+                <a href="#" class="button js-close-modal">Закрыть</a>
             </div>
         </div>
     </div> 
@@ -705,6 +705,5 @@
     <script src="./scripts/order-form.js"></script>
     <script src="./scripts/slideshow.js"></script>
     <script src="./scripts/modal.js"></script>
-    <script src="./scripts/ajax.js"></script>
 </body>
 </html>
