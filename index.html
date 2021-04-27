@@ -488,29 +488,33 @@
             <section class="order">
                 <div class="container container__order">
                     <h2 class="order__title">Закажите доставку</h2>
-                    <form class="order__form">
-                        <input type="hidden" name="to" value="kud1ato@gmail.com">
+                    <form class="order__form" id="myForm">
+                        <input type="hidden" name="email" value="kud1ato@gmail.com">
                         <div class="form__column">
                             <div class="form__row">
                                 <div class="form__block">
                                     <div class="form__block-title">Имя</div>
                                     <input type="text" class="type__form" name="name" required>
+                                    <div class="error"></div>
                                 </div>
                                 <div class="form__block">
                                     <div class="form__block-title">Телефон</div>
                                     <input type="text" class="type__form" name="phone" required>
+                                    <div class="error"></div>
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="form__block">
                                     <div class="form__block-title">Улица</div>
                                     <input type="text" class="type__form" name="street" required>
+                                    <div class="error"></div>
                                 </div>                            
                             </div>
                             <div class="form__row">
                                 <div class="form__block">
                                     <div class="form__block-title">Дом</div>
                                     <input type="text" class="type__form" name="house" required>
+                                    <div class="error"></div>
                                 </div>                                                        
                                 <div class="form__block">
                                     <div class="form__block-title">Корпус</div>
@@ -519,10 +523,12 @@
                                 <div class="form__block">
                                     <div class="form__block-title">Квартира</div>
                                     <input type="text" class="type__form" name="flat" required>
+                                    <div class="error"></div>
                                 </div>                                                        
                                 <div class="form__block">
                                     <div class="form__block-title">Этаж</div>
                                     <input type="text" class="type__form" name="floor" required>
+                                    <div class="error"></div>
                                 </div>                                                        
                             </div>
                         </div>
@@ -533,26 +539,29 @@
                             </div>
                             <div class="form__controls">
                                 <label class="radio">
-                                    <input type="radio" class="radio__elem" name="payment">
+                                    <input type="radio" class="radio__elem" name="payment" value="giveBack"required>
+                                    <div class="error"></div>
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Потребуется сдача</div>
                                 </label>                                
                                 <label class="radio">
-                                    <input type="radio" class="radio__elem" name="payment">
+                                    <input type="radio" class="radio__elem" name="payment" value="byCard" required>
+                                    <div class="error"></div>
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio radio--checkbox">
-                                    <input type="checkbox" class="radio__elem" name="payment" value="no" checked>
+                                    <input type="checkbox" class="radio__elem" name="callback" value="no" checked>
+                                    <div class="error"></div>
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Не перезванивать</div>
                                 </label>
                             </div>
                             <ul class="form__buttons">
                                 <li class="form__button">
-                                    <button type="submit" value="Заказать" class="button preview__button">Заказать</button>
+                                    <button type="submit" id="send" value="Заказать" class="button preview__button">Заказать</button>
                                 </li>
                                 <li class="form__button">
                                     <button type="reset" value="Очистить" class="button button--transparent">Очистить</button>
@@ -688,6 +697,7 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="./scripts/jquery.onepage-scroll.js"></script>
+    <script>$(".main").onepage_scroll();</script>
     <script src="./scripts/burger.js"></script>
     <script src="./scripts/accordion-vertical.js"></script>
     <script src="./scripts/accordion-horizontal.js"></script>
@@ -695,5 +705,6 @@
     <script src="./scripts/order-form.js"></script>
     <script src="./scripts/slideshow.js"></script>
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/ajax.js"></script>
 </body>
 </html>

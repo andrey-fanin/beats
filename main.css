@@ -57,6 +57,7 @@ p {
 
 section {
   height: 100%;
+  display: flex;
 }
 
 .wrapper {
@@ -661,6 +662,7 @@ template {
 }
 
 .pagination {
+  display: none;
   position: fixed;
   top: 47%;
   right: 13.5%;
@@ -1133,7 +1135,7 @@ template {
 }
 
 .colors {
-  background: url(../../../images/bg/bg-colors.png) right center no-repeat;
+  background: url(./images/bg/bg-colors.png) right center no-repeat;
   color: #fff;
 }
 .colors__title {
@@ -1164,7 +1166,7 @@ template {
   flex-direction: column;
   writing-mode: tb-rl;
   transform: rotate(180deg);
-  max-height: 65rem;
+  max-height: 100%;
 }
 
 .colors__item-title {

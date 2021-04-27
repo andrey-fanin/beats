@@ -61,6 +61,7 @@ $(".order__form").submit((e) => {
 
 $(".js-close-modal").click((e) => {
   e.preventDefault();
+  console.log('klik');
   const form = $('.order__form');
   const name = form.find("[name='name']");
   const phone = form.find("[name='phone']");
