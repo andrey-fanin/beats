@@ -1,0 +1,108 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;    
+    bottom: 0;
+    width: 100%;
+    &__col {
+        display: flex;
+        
+        &--align--left {
+            flex-direction: column;
+        }
+        
+        &--align--right {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.container__footer {
+    position: absolute;
+    background: #fff;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    padding: 3rem 21rem;
+
+    @include tablets {        
+        flex-direction: row;    
+        padding: 3rem 6rem;
+    }
+
+    @include phones {        
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0;
+    }
+}
+
+.footer__col--align--left {
+    @include tablets {
+        margin-bottom: 0;
+    }
+}
+
+
+.footer__col--align--left {
+    @include phones {
+        margin-bottom: 1rem;
+    }
+}
+
+.contacts--footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+
+    @include tablets {        
+        align-items: flex-start;
+    }
+
+    @include phones {
+        align-items: center;
+        font-size: 2.5rem; 
+        margin-bottom: 2rem;       
+    }
+}
+
+.contacts__direction {
+    @include tablets {
+        margin-bottom: 0;
+    }
+
+    @include phones {
+        margin-bottom: 2rem;
+    }
+}
+
+.contacts__number {
+    display: flex;
+    align-items: center;
+
+}
+
+.socials {
+    display: flex;
+    
+    &__item {
+        margin-right: 1rem;
+        width: 30px;
+        height: 30px;
+        fill: #b3b3b3;
+        transition: .3s;
+        cursor: pointer;
+        
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            fill: #000;
+        }
+    }
+}

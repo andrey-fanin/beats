@@ -1,0 +1,46 @@
+
+.burger {    
+    display: none;
+    width: 24px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;    
+    z-index: 1000;
+    transition: .4s;
+    
+    &__plank {
+        display: none;
+        background: #292929;
+        height: 4px;
+        border-radius: 10px;
+    }
+    
+    @include tablets {
+        display: inline-flex;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+
+        &__plank {
+            display: block;
+        }
+    }
+
+    @include phones {        
+        top: 6%;
+    }
+
+    &>svg {
+        display: none;
+    }
+
+    &--active {
+        &>.burger__plank {
+            display: none;            
+        }
+
+        &>svg {           
+            display: block;
+        }
+    }
+}

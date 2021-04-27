@@ -1,0 +1,152 @@
+.preview__general {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 0;
+
+    @include tablets {        
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.preview__title {
+    margin-bottom: 2.4rem;    
+    text-align: left;
+    max-width: 40rem;
+
+    @include tablets {
+        max-width: 66rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    @include phones {
+        max-width: 45rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.preview__descr {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.1rem;
+    max-width: 33.2rem;
+    line-height: 120%;
+    margin-bottom: 3.3rem;
+
+    @include tablets {
+        margin-bottom: 2.3rem;       
+    }
+    
+    @include phones {
+        font-size: 3.2rem;
+        max-width: 49.2rem;        
+    }
+}
+
+.preview__button {
+    @include phones {        
+        padding: 4.1rem 7.1rem;
+        font-size: 2.6rem;
+    }
+}
+
+.preview__beats {
+    width: 49rem;
+    
+    position: relative;
+    top: 4rem;
+    left: 1rem;
+
+    @include tablets {
+        width: 32rem;
+        margin-bottom: 16rem;
+        top: 9rem;
+    }
+
+    @include phones {
+        margin-bottom: 9rem;
+        width: 52rem;
+        top: 1rem;
+    }
+}
+
+.advantages__list {    
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: flex-start;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.advantages__item {
+    width: 16.6rem;
+    margin-right: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.advantages__descr {
+    width: 11.4rem;
+    margin-bottom: 0;
+}
+
+.pagination {
+    position: fixed;
+    top: 47%;
+    right: 13.5%;
+    // z-index: $z-index-menu;
+
+    &__item {
+        width: 1.8rem;
+        height: 1.8rem; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-bottom: 0.3rem;
+        border: 0.1rem solid transparent;
+        border-radius: 50%;
+        
+        &--active {
+            border-color: #E01F3D;    
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background: #292929;
+        opacity: 0.6;
+        transition: 0.3;
+        
+        &:hover {
+            background: #E01F3D;
+            opacity: 1;
+        }
+    }
+
+    @include tablets {
+        display: none;
+    }
+
+}
+
+.pagination__item--active .pagination__link {
+    background: #E01F3D;
+    opacity: 1;
+}

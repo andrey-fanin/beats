@@ -1,0 +1,476 @@
+               JQUERY - библиотека с готовыми функциями и классами для ускорения работы.
+    Основная задача - манипуляция и выборка ДОМ-элементов. (+AJAX)
+    $('.class:first-child', context);  // вернёт объект, в прототипе будут лежать все доступные методы JQ
+    первый аргумент обязателен, второй - нет (нужен для подробностей поиска)
+    Любой css селектор валиден как первый аргумент. (length - кол-во найденных элементов)
+    Если первый аргумент - функция, она будет выполнена по событию построения ДОМ-дерева.
+    Строка с <elem> создаст ДОМ-элемент с нужным параметром. (параметр - второй аргумент)
+
+    Почти все сценарии JS обрабатывают какие-то события.
+    У JQ есть своя удобная обёртка (функция поверх функции). Чтобы навесить, нужно выбрать элемент и вызвать метод "on" ('click', function(обработчик))
+    $(document).ready()  == document.addEventListener('DOMContentLoaded') // применить, когда будет загружена вся разметка
+    $(window).on('load') == window.onload                                 // применить, когда будет загружен контент страницы (например, картинки)
+    $(window).scroll()   == window.onscroll                               // прокрутили ползунок скролла (если у блока есть скролл (оверфлоу не хидден))
+    $(window).resize()   == window.onresize                               // изменили размер окна (как горизонтально, так и вертикально)
+
+                Chaining
+    Передача данных от одного метода к другому. Результат работы одного метода подаются на вход следующему, и т.д., пока с ними не будет действие.
+
+
+
+                Начало работы с JQ.
+    Либо закинуть напрямую, либо через CDN, (cdnjs.com) либо через npm / yarn.
+    Подключаем перед закрывающем боди, чтобы не загружать их до разметки и пользовать фукнции с переменными. БИЛИОТЕКА ВЫШЕ ВСЕХ ФАЙЛОВ
+    ОФ документация есть на jquery-docs.ru / jquery cheat sheet / oscarotero jquery - интерактивный чит-шит
+
+    $.fn.jquery // текущая версия JQ
+
+
+
+                Функции JQ
+    let elems = jquery('.block');    === let elems = $('.block');
+
+    console.log(elems);
+    console.log(elems.length === 0);   элементы не найдены 
+
+
+    $(document).ready(function) => {              
+        console.log('DOM построен');
+        console.log(this);                   //указывает на window
+    });
+
+
+    $(document).ready(() => {                 // обработать события клика по ссылке
+
+        $('.link').on('click', e => {          || $('.link').click(e => {
+         e.preventDefault();
+
+         console.log('bil klik');
+        });
+    });    
+                            !!!    Короткие сообщения - только на глобальных объектах! Внутри функции - через .on !!!
+                            HTML DOM event - все события в JS
+    
+
+    $(document).ready(() => {           
+
+        $('.link').on('click', e => {       
+            e.preventDefault();
+
+            let result = $('.link-text').text();    /// получить текст с элемента
+
+            $('.container').text(result);           /// передать контейнеру текст со ссылки
+
+
+            let result = $('.link').attr('href');    /// передать атрибут
+            $('.container').text(result);     
+
+            $('.link').attr('href', '//loftschool.com') /// заменить атрибут
+
+            let result = $('.link').html();
+            $('.container').html(result)                // получить разметку (возьмёт элементы) html
+
+            let result = $('.link').width();          /// число, соответствующее кол-ву пикселей
+            let result = $('.link').outerWidth();          /// число, соответствующее кол-ву пикселей вместе с padding
+            let result = $('.link').outerWidth(true);          /// число, соответствующее кол-ву пикселей вместе с padding и margin
+
+            $('.link').width(50);                     /// увеличить ширину на пиксели
+            $('.link').outerWidth(50);                     /// увеличить ширину на пиксели с учётом margin
+        });
+    });    
+
+
+
+    $(document).ready(() => {
+
+        $('.change').on('click', e => {
+
+            $('.block').attr('class', 'another');         // сменить класс на another
+            $('.block').addClass('new')                   // добавить класс к элементу
+            $('.block').removeClass('new')                // удалить класс
+            $('.block').toggleClass('new')                // если такой класс есть, то при клике удалит его, если нет - то добавит 
+            $('.block').toggleClass('new toggle')         // чередовать классы
+            $('.block').hasClass('new')                   // проверить наличие класса
+        });
+    })
+
+
+
+    $(document).ready(() => {
+
+        $('#button').on('click', e => {
+
+            let block = $('#text');
+
+            let value = block.val();         // получить то, что вводят в текстовое поле 
+
+            console.log(value);
+
+            let block = $('.radio:checked');
+            let block = $('#select');
+            let block = $('#file');         // имя файла с приставкой fakepath
+        })
+    })
+
+
+
+    $(document).ready(() => {
+
+        $('#button').on('click', e => {
+
+            let styles = $('.block').css('font-size');        // получить выбранный стиль (только computed-свойства (просчитаны браузером))
+            let styles = $('.block').css('font-size', '40px');      // изменить стиль на нужный параметр
+            
+            let styles = $('.block').css({            // сделать несколько свойств 
+                'font-size': '40px',
+                'border': '2px solid red'
+            });
+        })
+    })
+
+
+
+    $(document).ready(() => {
+
+        $('.set').on('click', e => {
+
+            $('.block').text('New text)                       // поменять значения у всех блоков с таким классом
+            $('.block').attr('data-attr', 'test')
+
+            let result = $('.block').width ()            // значение первого элемента из набора
+            let result = $('.block').text ()            // вернёт текст сразу со всех блоков
+        });
+    });
+
+
+
+    $(document).ready(() => {
+
+        $('.link').on('click', function(e) {
+            e.preventDefault();
+
+            $('.link').css('color', 'red');      // сменить цвет у всех элементов
+            $(this).css('color', 'red');       // this указывает на отработавший элемент
+        })
+
+
+        $('.link').on('click', (e) => {
+            e.preventDefault();
+
+            $('.link').css('color', 'red');      // сменить цвет у всех элементов
+            $(this).css('color', 'red');       // this ссылается на внешний контекст при стрелочной функции
+
+            e.target // верхний элемент, на котором фактически произошло событие
+            e.currentTarget // элемент, для которого предназначалось событие 
+
+            let elem = $(e.currentTarget);
+        })
+    });
+
+
+
+    $(document).ready(() => {
+
+        $('.item:first-child').css('color', 'red');    /// внутри родителя
+
+        $('.item').first().css('color', 'red');        /// среди всех элементов, которые нашлись по классу
+        $('.item').last().css('color', 'red');
+        $('.item').eq(0).css('color', 'red');
+
+        let ndx = $('.indexed').index();              // найти порядковый номер элемента
+        let ndx = $('.indexed').index('.item');       // найти номер элемента среди .item
+
+        $('.item').not('.excluded').css('color', 'red'); // перекрасить все элементы кроме .excluded
+        $('.item').not(':last-child').css('color', 'red'); // перекрасить все элементы кроме last-child (чётные-нечётные считаются с 0)
+
+        $('.item').not(':last-child').add('.block').css('color', 'red'); // перекрасить все элементы кроме last-child и добавить block
+    });
+
+
+
+    $(document).ready(() => {
+
+        let result = $('.content').closest('.outer');       // ищет ближайшего и первого родителя с удовлетворяющим селектором (над .content)
+
+        let result = $('.outer').find('.content');       // ищет потомка с удовлетворяющим селектором (под outer), глубина потомка не важна
+    });
+
+
+
+    $(document).ready(() => {
+
+        let result = $('.top').next();          /// следующий элемент после найденного (он один) на этом же уровне
+        let result = $('.top').nextAll();          /// вообще все элементы ниже по уровню
+        let result = $('.top').nextAll('.outer');          /// вообще все элементы ниже по уровню с классом outer 
+
+        let result = $('.middle').prev();          /// предыдущий элемент после найденного (он один) на этом же уровне
+
+        let result = $('.middle').sibling();          /// все соседи на одном уровне с найденным элементом 
+        let result = $('.middle').sibling('.outer');          /// все соседи на одном уровне с найденным элементом по классу .outer
+
+        let result = $('.middle').parent();          /// поиск родителя на один уровень выше 
+
+        let result = $('.middle').children();          /// поиск прямого потомка 
+
+    });
+
+
+
+    $(document).ready(() => {
+
+        $('.block').each((ndx, item) => {   // применится для каждого блока 
+            $(item).text(ndx);
+        })
+
+        $.each([1, 2, 3], (ndx, item) => {})           // перебор массива
+
+        let obj = {
+            one: 'prop1',
+            two: 'prop2'
+        }
+
+        $.each(obj, (key, value) => {                    // перебор объекта
+            console.log(key, ':', value);
+        })
+
+    });
+
+
+
+    $(document).ready(() => {
+
+        $('.block').each((ndx, item) => {  
+
+                    const elem = $(item)           // если элмент ищется больше одного раза, лучше сэкономить время
+
+                    if (!elem.is('#uniq')) {
+                        $(item).css('color', 'red');
+                    }
+
+            if ($(item).attr('id') != 'uniq') {     // перекрасим блок, только если его айди не равен uniq
+                $(item).css('color', 'red');
+            }
+
+            if ($(item).is('#uniq')) {
+                $(item).css('color', 'red');
+            }
+        });
+
+        $('.block').filter('#uniq').css('color', 'red');    // закрасить элемент, найденный по id uniq
+        $('.block').filter((ndx, item) => {
+            return true                                     // закрасить все элементы, попавшие под параметр '.block'
+            return false                                    // не закрасить элементы, попавшие под параметр '.block'
+            return $(item).attr('id') == 'uniq';            // закрасить элемент, попавший под параметр '.block' и id uniq
+        }).css('color', 'red');  
+    });
+
+
+
+    $(document).ready(() => {
+
+        let result = $('.content', $('.wrap-one'));   // только один элемент с классом content внутри блока wrap-one;
+        let result = $('.wrap-one').find('.content');   // то же самое
+
+        $('.container').prepend(markup)     // добавить в container после всего содержимого
+        $('.container').append(markup)     // добавить в container до всего содержимого
+        markup.appendTo($('.container'))     // пишем сначала что добавить, а потом - куда
+        $('.container').before(markup)        // первым соседом сверху
+        $('.container').after(markup)        // первым соседом снизу
+        $('.container').wrap(markup)        // обернуть container в markup
+
+        if ($('.container').parent().is('a')) {    // если у container в родителях есть ссылка, то с этого элемента удалим обёртку
+            $('.container').unwrap();              // обёртка снимается через unwrap с того, где была надета с помощью wrap        
+        } else {
+            $('.container').wrap(markup)           // обёртка удалится, но содержание останется
+        }
+    });
+
+
+
+    $(document).ready(() => {
+
+        $('.launch').on('click', e => {
+
+            $('.container').empty();               // удалить всё содержимое блока, но сам блок оставить
+            $('.container').remove();               // удалить сам блок
+
+            let clone = $('.container').clone();   // сохранить блок в переменную перед клонированием
+            $('body').append(clone);               // скопировать все блоки
+
+            let clone = $('.container:first-child').clone();   // клонировать по одному блоку
+        })
+    });
+
+    $(document).ready(() => {                 // динамические элементы - те, которых не было на странице изначально
+
+        const elem = $('<a>', {
+            text: 'Ссылка',
+            attr: {
+                class: 'link'
+            }
+        });
+
+        $('launch').on('click', e => {
+            $('.container').append(elem);
+        })
+
+        $('body').on('click', '.link', e => {                // чтобы обработчик работал на элементе, не существовашем на странице изначально,
+            e.preventDefault()                      // нужно повесить его на тот элемент, который точно был заранее
+
+            console.log('klik');
+        })
+
+
+                                               !!! АНИМАЦИИ !!!
+
+
+        $('#hide').on('click', e => {                    // анимации hide и show принято использовать без таймингов ()
+            let elem = $(e.currentTarget).prev();       // по умолчанию скорость анимации .3s
+
+            elem.hide(400);
+            elem.slideUp(400, function () {
+                $(this).css('color', 'red')
+            });
+
+            elem.fadeOut()
+
+            elem.fadeToggle()                             // скрыть/показать изменяя прозрачность
+
+            elem.fadeTo(400, 0..1)                     // изменить прозрачность за .4s
+        })
+
+        $('#show').on('click', e => {
+            let elem = $(e.currentTarget).prev();
+
+            elem.show(400);
+            elem.slideDown(400);
+
+            elem.fadeIn()
+
+            elem.slideToggle()                              // скрыть/показать измення высоту
+        })
+
+        
+
+
+        $('.launch').on('click', e => {                      // длинная анимация
+
+            $('.block').animate({
+                'left' : '200px',
+                'opacity' : '0'
+            }, 500).animate({
+                'left' : '0px',
+                'opacity' : "1"
+            })
+        })
+
+
+
+        $('.launch').on('click', e => {                      // повесим класс на анимацию для контроля состояния
+
+            const block = $('block');                        // 1 клик - блок подвинется, 2 клик - блок вернётся назад
+
+            if(block.hasClass('active')) {
+
+                block.stop(true, false).animate({             // очистить очередь анимации, текущую анимацию надо превести к финалу
+                    'left' : '0px'                          // чтобы анимации не стояли в очереди
+                });
+                block.removeClass('active); 
+
+                block.clearQueue().finish().animate({      
+                    'left' : '0px'                         
+                });
+                block.removeClass('active); 
+
+            } else {
+
+                block.stop(true, false).animate({               // true true == привести анимацию в конец перед запуском новой
+                    'left' : '200px' 
+                });
+                block.addClass('active');
+
+                block.stop(true, false).animate({          
+                    'left' : '200px' 
+                });
+                block.addClass('active');
+            }
+
+        })
+
+
+
+        
+
+
+    });
+
+
+
+    $(window).scroll(() => {
+        let wTop = $(window).scrollTop();
+        let wTop = $(window).scrollLeft();
+
+        console.log(wTop);                        // на сколько сдвинулся скролл
+    })
+
+    $('.launch').on('click', e => {               // анимировать скролл в начало за 1s
+        $('html, body').animate ({
+            'scrollTop' : '0'
+        }, 1000)
+    })
+
+
+
+
+    $(window).scroll(() => {
+        let wTop = $(window).scrollTop();
+        
+        let offset = $('h1').offset().top;
+        let offset = $('h1').offset().left;
+
+        console.log(offset - wTop);                        // на сколько сдвинулся скролл
+    })
+
+    $('.launch').on('click', e => {               // анимировать скролл в начало за 1s
+        $('html, body').animate ({
+            'scrollTop' : '0'
+        }, 1000)
+    })
+
+
+
+    $(window).resize(() => {             // отслеживает изменения размера окна
+        console.log($(window).width());
+        console.log($(window).height());
+    });
+
+
+    $(window).on('load', () => {             // проверить загрузку, сначала разметка, затем лоад
+                                            // с контентом лучше работаь после лоад
+        
+    });
+
+                                                Чистый JS 
+
+    function debounce(func, time) {          // функция hello произойдёт через 1s после последней функции hello 
+        let timeout;
+
+        return function() {
+            const context = this;
+            const args = arguments;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(context, args);
+            }, time);
+        };
+    };
+
+    let hello = debounce((one, two) => {
+        console.log('hello');
+        console.log(one, two);
+    }, 1000)
+    
+    $(window).scroll(() => {
+        hello(1, 2);
+    });

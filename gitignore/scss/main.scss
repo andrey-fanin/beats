@@ -1,0 +1,23 @@
+$baseFontSize: 10px;
+
+$tablets: 768px;
+$phones: 480px;
+$z-fixed-menu: 100;
+
+@import "./layout/mixing.scss";
+@import "./layout/base.scss";
+@import "./layout/mixing.scss";
+@import "./layout/normalize.scss";
+@import "./blocks/header.scss";
+@import "./blocks/preview.scss";
+@import "./blocks/strengths.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/colors.scss";
+@import "./blocks/team.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/order.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/map.scss";
+@import "./blocks/hamburger.scss";
+@import "./blocks/hamburger-menu.scss";
+@import "./blocks/modal.scss";

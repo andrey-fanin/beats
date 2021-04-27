@@ -1,0 +1,42 @@
+.burger-menu {
+    color: white;
+    background-color: #313131;
+    width: 100vw;
+    height: 100vh;
+    font-size: 36px;
+    line-height: 72px;
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+    overflow: auto;
+    transition: .4s;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__item {
+        white-space: nowrap;
+    }
+    
+    &--active {
+        bottom: 0;
+    }
+}
+
+
+.container__burger-menu {
+    padding: 4.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-menu__close {
+    display: flex;
+    font-size: 0px;
+    justify-content: flex-end;
+    margin-bottom: 7.3rem;
+    cursor: pointer;
+}

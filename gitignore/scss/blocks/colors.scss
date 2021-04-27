@@ -1,0 +1,92 @@
+.container__colors {
+    width: 100%;
+    max-width: none;
+    justify-content: flex-end;    
+    position: relative;
+}
+
+
+.colors {
+    background: url(../../../images/bg/bg-colors.png) right center no-repeat;
+    color: #fff;
+    
+    &__title {
+        position: absolute;
+        top: 11.5rem;
+        left: 8.4rem;
+        
+        @include tablets {
+            top: 9rem;
+            left: 4rem;
+        }
+        
+    }
+    
+    @include tablets {
+        background: url(../../../images/bg/bg-colors.png) right 40px center no-repeat;
+        background-size: cover;
+
+    }
+}
+
+.colors__list {
+    display: flex;
+    flex-direction: row;
+}
+.colors__item {
+    display: flex;
+    flex-direction: column;
+    writing-mode: tb-rl;
+    transform:rotate(180deg);
+    max-height: 65rem;
+}
+
+.colors__item-title {
+    padding: 3rem 3.4rem;
+    font-family: Alegreya Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    cursor: pointer;
+
+    &--silver {
+        background: #999;
+    }
+
+    &--black {        
+        background: #292929;
+    }
+
+    &--red {
+        background: #E01F3D;        
+    }
+}
+
+.colors__descr {
+    padding: 0;
+    max-width: 0rem;
+    writing-mode: lr-tb;
+    transform:rotate(180deg);
+
+    font-family: Alegreya Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    background: rgba(51, 53, 55, 0.9);
+    backdrop-filter: blur(10px);        
+    overflow: hidden;
+    transition: .4s;
+}
+
+.colors__item--active {
+    >.colors__descr {        
+        padding: 3.1rem 5.3rem 3.1rem 3.8rem;
+        max-width: 43rem;
+
+        @include tablets {
+        }
+    }    
+}

@@ -1,0 +1,16 @@
+[
+{
+    "name": "Ivan",                  // в json все значения в двойных кавычках
+    "lastName": "Petrov"    
+},
+{
+    "name": "Ivn",
+    "lastName": "Perov"
+}
+]
+
+JSON.stringify({name: '1dasd'}) >     // переводит в строку
+< "{'name':'1dasd'}"
+
+JSON.parse("[1,2,3]")                     // из текстового массива вернёт обработанный js массив
+[1,2,3]

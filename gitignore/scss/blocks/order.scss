@@ -1,0 +1,359 @@
+
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 6.8rem 0 8.5rem;
+    background: url(./images/bg/bg-order.png) center bottom no-repeat;
+    background-size: cover;
+
+    &__title {
+        margin-bottom: 5.8rem;
+
+        @include tablets {
+            margin-bottom: 3rem;
+        }
+
+        @include phones {
+            margin-bottom: 7rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex: 1;                
+        
+        @include tablets {
+            flex-direction: column;
+            padding: 0 7rem;
+        }
+
+        @include phones {
+            padding: 0;
+        }
+    }
+}
+
+.container__order {
+    display: flex;
+    flex-direction: column;    
+    width: 109rem;
+    max-width: none;
+    padding: 0 8rem;
+
+    @include phones {        
+        padding: 0 1rem;
+        width: 95%;
+    }
+}
+
+.form__column {
+    display: flex;
+    flex-direction: column;    
+    flex: 1;    
+    width: 50%;
+    margin-right: 2.7rem;
+    margin-bottom: 0;      
+    
+    font-size: 1.4rem;
+    line-height: 143%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {        
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1.1rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include phones {        
+        margin-bottom: 2.1rem;
+    }
+    
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 1.1rem;
+
+    @include phones {
+        margin-bottom: 2rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.form__block {
+    display: flex;
+    margin-right: 1.7rem;
+    flex: 1 1 100%;
+    flex-direction: column;
+
+    &--comment {
+        margin-bottom: 6.5rem;
+        max-height: 15.2rem;
+        margin-right: 0;
+
+        @include tablets {
+            margin-bottom: 2.5rem;
+        }
+
+        @include phones {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &:nth-last-of-type(1) {
+        margin-right: 0;
+    }
+
+    &-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 119%;    
+        margin-bottom: 0.6rem;
+
+        @include phones {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+.type__form {
+    display: flex;
+    border-radius: 0.4rem;
+    flex: 1;
+    height: 5.8rem;    
+    padding: 1.8rem 1.2rem;
+    width: 100%;
+    outline: none;
+    border: 0.3rem solid transparent;
+
+    .input-error {
+        background-color: #CA1B36;
+    }
+
+    &:focus {
+        border: 0.3rem solid #E01F3D;
+    }
+
+    @include tablets {
+        padding: 0.8rem 1rem;
+    }
+
+    @include phones {
+        padding: 1.8rem 1rem;
+    }
+}
+
+.form__radiobuttons {
+    margin-bottom: 1.9rem;
+    display: flex;
+}
+
+.type__comment {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 15.2rem;
+    resize: none;
+    padding: 1.8rem 1.2rem;
+    border: 0.3rem solid transparent;
+    border-radius: 0.4rem;
+    outline: none;
+
+    &:focus {
+        border: 0.3rem solid #E01F3D;
+    }
+
+    @include tablets {        
+        min-height: 8.2rem;
+    }
+
+    @include phones {        
+        min-height: 13.2rem;
+    }
+}
+
+.form__radiobutton__item {
+    margin-right: 1.6rem;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: white;
+        margin-right: 1rem;
+    }
+}
+
+.form__radiobutton {
+    display: none;
+}
+
+.order__checkbox {
+    margin-bottom: 4.8rem;
+    margin-right: 1.1rem;
+    display: none;
+
+    &::after {
+        display: block;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        background: white;
+        border-radius: 0.4rem;
+    }
+}
+
+.order__checkbox:checked.order__checkbox::after {
+    background: red;
+}
+
+.form__buttons {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.form__button {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.form__controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.9rem;    
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &:last-of-type {
+        margin-bottom: 4.4rem;
+    }
+
+    @include tablets {
+        justify-content: flex-start;
+    }
+
+    @include phones {
+        justify-content: center;
+        margin-bottom: 3.9rem;        
+        flex-wrap: wrap;
+    }
+}
+
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 1.6rem;
+    align-items: center;
+    
+    &__title {
+        font-size: 1.6rem;
+        line-height: 119%;
+        white-space: nowrap;
+
+        @include phones {
+            font-size: 2.5rem;    
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.button--transparent {
+    background: none;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none; 
+    text-transform: none;
+    font-size: 1.6rem;
+
+    &:hover {
+        color: #CA1B36;
+        background: transparent;
+    }
+
+    @include phones {
+        font-size: 2.5rem;
+    }
+}
+
+.radio__elem {
+    display: none;
+}
+
+.radio__elem:checked ~ .radio__visible::before{
+    display: block;
+}
+
+.radio__visible {
+    width: 2.6rem;
+    height: 2.6rem;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    margin-right: 1.0rem;
+    flex-shrink: 0;
+
+    @include phones {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    &::before {
+        display: none;
+        content: "";
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        background: #E01F3D;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.radio--checkbox > .radio__visible{
+    border-radius: 0.4rem;
+}
+
+.radio--checkbox > .radio__visible::before{
+    background: url(./images/symbol/Vector.png) center center no-repeat;
+}

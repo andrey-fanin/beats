@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="phone">
+    <div class="wrapper">
+        <div class="block"></div>
+    </div>    
+    <div class="sex">
+        <select name="" id="" class="sex__select">
+            <option value="m">M</option>
+            <option value="f">F</option>
+        </select>
+    </div>
+</body>
+<script src="./beginner-js.js"></script>
+<script>
+    const element = document.querySelector('#container');         // ищет элемент с id container, возвращает объект
+
+    element.style.color = 'red';
+    element.style.fontSize = '30px';
+    element.textContent = '';              // поменять текст у объекта
+
+    const element = document.createElement('div'); // создаёт элемент в памяти, но не добавляет на страниц
+    const container = document.querySelector('#container');
+    container.appendChild(element); // сделать дочерним
+    element.textContent = 'Div text'
+    document.body.appendChild(element); // сразу в боди
+    document.querySelector('#myButton'); // если не добавить в переменную, то придётся каждый раз обращаться заново
+    
+    const element2 = document.createElement('span');
+    container.appendChild(element2);
+    element2.textContent = 'Span text';
+
+    const myButton = document.querySelector('#myButton');
+    const container = document.querySelector('#container');
+    myButton.addEventListener('click', function() {
+        console.log('клик по кнопке');
+    });    // обработчик события
+    
+    container.addEventListener('click', function() {
+        console.log('клик по контейнеру');
+        container.style.color = 'red';
+    });
+    
+    const phone = document.querySelector('#phone');
+    phone.addEventListener('keydown', function(event/e/evt) {
+        console.log('keydown');
+        console.log(event.type); // имя произошедшего события (keydown)
+        console.log(event.key); // всё, что ввели в плашку
+        console.log(event); // всё событие
+        
+        let isDigit = false;
+        if (event.key >= 0 || event.key <=9) {
+            isDigit = true;
+        }
+        
+        if (isDigit == true) {
+            console.log('цифра');            
+        } else {
+            console.log('буква');
+        }
+    });
+    
+    phone.addEventListener('keydown', function(event/e/evt) {
+
+        let isDigit = false;
+
+        if (event.key >= 0 || event.key <=9) {
+            isDigit = true;
+        }
+        
+        if (isDigit == true) {
+            console.log('цифра');            
+            
+        } else {
+            event.preventDefault(); // клавиша не попадёт в текстовое поле, keydown - действие по умолч. для текстового поля
+        }
+        
+        ///////////
+        
+        let isDigit = false;
+        let isDash = false;
+        let isControl = false;
+
+        if (event.key >= 0 || event.key <=9) {
+            isDigit = true;
+        }
+
+        if (event.key == '-') {
+            isDash = true;
+        }
+
+        if (event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace') {
+            isControl = true;
+        }
+
+        if (!isDigit && !isDash && !isControl) {
+            event.preventDefault();
+        }
+    }
+
+
+    ///
+
+
+
+    console.log(myForm.elements); // всё, что внутри формы
+    console.log(myForm.elements.lastName); // всё, что соответсвует атрибуту lastName 
+    console.log(myForm.elements.lastName.value); // введёное значение в плашку
+    console.log(myForm.elements.gender.value);
+    console.log(myForm.elements.checkbox.checked);
+
+    if (myForm.elements.auto.checked == true) {
+        console.log ('есть автомобиль!');
+    };
+
+    if (myForm.elements.gender.value == 'm')  {
+        console.log ('Man');
+    } else {
+        console.log ('Woman');
+    };
+
+
+    ///
+
+
+    const myButton = document.querySelector('#myButton');
+    const nameInput = document.querySelector('#nameInput');
+    const list = document.querySelector('#list');
+
+    myButton.addEventListener('click', function() {
+        const newItem = document.createElement('li') // создали элемент списка
+        newItem.classList.add('item');               // добавили класс элементу списка
+        newItem.textContent = nameInput.value;       // вставили текст, который был набран в форме
+
+        const deleteButton = document.createElement('button'); // создали кнопку удаления
+        deleteButton.textContent = 'удалить';                  // добавили внутрь кнопку "удалить"
+
+        deleteButton.addEventListener('click', function() {    // добавили слушателя для кликов удаления
+            list.removeChild(newItem);                         // удалили элемент списка по нажатию на кнопку
+        })
+
+        newItem.appendChild(deleteButton);                     // добавляем кнопку "удалить"
+        list.appendChild(newItem);                             // добавляем li в лист
+
+        nameInput.value = '';                                  // очищаем текстовое поле после ввода
+
+
+    })
+
+
+    
+
+</script>
+</html>

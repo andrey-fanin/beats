@@ -1,0 +1,121 @@
+                What is препроцессоры?
+Предпроц получает на входе код, а на выходе преобразует в код 
+другого языка.
+
+    Самые популярные: LESS, SASS, STYLUS.
+
+        Зачем нужны?
+1) Ускоряют разработку
+2) Снижают рутину при написании кода
+3) Код переиспользуется
+4) Алгоритмические конструкции
+5) Косвенно увеличивают скорость загрузки стилей
+
+
+        Язык - scss, диалект - SASS
+Сасс без синтаксического мусора. 
+    
+
+            Возможности SASS
+1) Вложенности / наследование
+    .block {
+        height: 100px;
+    }
+
+    .one {
+        width: 100px;
+    }
+
+    .another {
+        border: 1px solid gray;
+    }
+
+    .another .one {
+        kek lol;
+    }
+
+    .another {
+        .one {
+            kek
+        }
+    }
+
+2) .block__one {
+    width: 100px;
+    
+    &:hover {
+        kek
+    }
+
+    &:active {
+        lol
+    }
+
+    &__one {
+        abdasd
+    }
+}
+
+3) width: 50% + 20% /// С одинаковыми единицами измерения
+
+4) $black: #666; /// Переменная
+    $var: 100px;
+    $text: "Ya text";
+    $array: vk, fb, tw;
+
+4.1) Область видимости переменной.
+        $blue: #123;
+
+        .one {
+            $blue:orange;
+        }
+
+5) Примесь.
+
+@mixin input ($width: 300px, $bg: #fff) {
+        display:block;
+        width: $width;
+
+        @if $width > < >= <= == != 100px {
+            text-align: left;
+        } @elseif $width == 120px {
+            text-align: center;
+        } @else $width != 10px {
+            text: none
+        }
+}
+
+    .input {
+        @include input (100px, #253);
+    }
+
+    .input {
+        @include input ($bg:#253);
+    }
+
+    .input-short {
+        @include input;
+        width: 100px;
+    }
+
+
+    .input-short {
+        @extend .input;               ///  наследование стилей
+    }
+
+6)  Циклы.
+
+    .social {
+        display: block;
+        mb: 10px;
+    }
+
+@each $social in (fb, vk, tw) {
+    .social_#{$social} {
+        background: url(#{$social}.png)
+
+        &:hover {
+        background: url(#{$social}-hover.png)            
+        }
+    }
+}

@@ -1,0 +1,143 @@
+
+                    Для мобилок
+Нужны:
+ разновидности лэйаута, чтобы знать, что от нас требуют
+ относительные единицы измерения rem
+ синтаксис запросов @media
+ определение современных разрешений экранов
+ дисплеи повышенной плотности пикселей
+
+
+Статичный лэйаут - всё лежит как лежит. Если окно меньше разрешения, то появится горизонтальный скролл для вёрстки.
+Ликвид лэйаут - блоки сжимаются пропорционально ширины окна, но не бесконечно. width 100%
+Адаптивный лэйаут - контент больше ширины перестраивается разным образом.
+Респонсив лэйаут - гибрид резины и адаптива.
+
+
+        Виды измерений
+Пиксели - абсолютные.
+Проценты - относительные к размеру родителя. (если не задана высота родителя, то блок будет считать height: auto)
+Em - относительно font-size родителя. 
+Rem - root em, считаются относительно тега html. Зависят от html: font-size.
+Vw - viewport width. Одна единица равна одному проценту ширины окна.
+Vh - viewport height. Аналогично предыдущему, но по высоте. (будет скрываться нижняя часть на айфоне с менюшкой)
+Vmin, vmax - проценты по меньшей/большей стороне. (могут пересчитываться по ресайзу)
+
+
+        Медиа-запросы пишутся с дефолтного, затем от большего к меньшему
+   @media            screen            and           (max-width: 768px)
+ключевое слово     тип носителя    лог.оператор        медиа функция
+
+
+        Брэйкпоинты - точки, где лэйаут должен перестроиться.
+Desktop - 1200px
+Notebook - 992px
+Planshet - 768px (flex-direction: column; columnName {width:100%})
+Smartphone - from 320px to 480px
+
+
+
+
+                        Заготовки CSS
+@media screen and (or ',' not) (max-width: 1200px)
+        (print, handhelp, tty, braille, tv...all)
+{
+        body {background: #green}
+        body:after{ content: "Desktop"}
+}
+                  
+@media screen and (max-width: 992px)
+{
+        body {background: #yellow}
+        body:after{ content: "after"}
+}
+
+Desktop first - если стилей нет, то применятся стили для больших экранов по дефолту.
+
+@media screen and (min-width: 1200px  )
+
+        || max-width - от большего к меньшему
+        || min-width - от меньшего к большему
+
+
+@media print {
+        .sidebar {display: none}                        || Для распечатки
+        .header {display none}
+}
+
+
+
+
+
+                        Practic
+html {
+ font-size: 16px
+}
+
+.container {width: auto; max-width: 1000px}
+
+.title {
+ font-size: 60px;
+ margin: 20px 0;
+}
+
+!!!При адаптиве размер контейнера МЕНЬШЕ, чем медиа-запрос, стоящий следующим!!!
+
+
+                Контент в столбик
+.list {
+        display:flex;
+        flew-wrap: wrap;
+        margin-left: -20px;
+}
+
+.list__item {
+        width: calc(100% / 4 - 20px);
+        margin-left: 20px;
+}
+
+@media (max-width 768) {
+        list__item {
+                width: calc(100% / 2 -20px)
+        }
+}
+
+@media (max-width 480) {
+        list__item {
+                width: 100%
+        }
+}
+
+
+                viewport
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+
+                retina optimize
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .block {
+                background: url(big)
+        }
+}
+
+<img src="" width="n/2"
+<img src="" srcset="images/2x.png 2x, images/3x.png 3x">
+<img src="" srcset="images/1x.png 500w, images/2x.png 700w, images/3x.png 800w">
+<img src="" sizes="max-width: 600px) 300px, (min-width: 650px) 900px")
+
+.block {
+        width: 400px;
+        height: 400px;
+        background: center;
+        background-size: contain;
+}
+
+
+\d+ /// в поиске - найти все числа
+
+(?!rem\()-?\d+px(?!\)) /// найти все rem
+rem($0)
+
+exclude *.css
