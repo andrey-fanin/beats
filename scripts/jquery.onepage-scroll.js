@@ -424,3 +424,6 @@
 
 
 }(window.jQuery);
+
+
+$(".main").onepage_scroll();

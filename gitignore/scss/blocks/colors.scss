@@ -7,7 +7,7 @@
 
 
 .colors {
-    background: url(../../../images/bg/bg-colors.png) right center no-repeat;
+    background: url(./images/bg/bg-colors.png) right center no-repeat;
     color: #fff;
     
     &__title {
@@ -38,7 +38,7 @@
     flex-direction: column;
     writing-mode: tb-rl;
     transform:rotate(180deg);
-    max-height: 65rem;
+    max-height: 100%;
 }
 
 .colors__item-title {

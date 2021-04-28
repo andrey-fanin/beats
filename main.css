@@ -56,7 +56,6 @@ p {
 }
 
 section {
-  height: 100%;
   display: flex;
 }
 
@@ -64,7 +63,7 @@ section {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .wrapper__content {
   flex: 1;
@@ -1570,6 +1569,146 @@ template {
 .reviewer__img {
   display: block;
   max-width: 100%;
+}
+
+.container__player {
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-section__title {
+  margin-bottom: 4.4rem;
+}
+
+.player__playback {
+  height: 16px;
+  width: 65%;
+  position: relative;
+}
+.player__playback::before {
+  display: block;
+  content: "";
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #333;
+  transform: translateY(-50%);
+}
+.player__playback-button {
+  background: #626262;
+  border-radius: 50px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.player {
+  position: relative;
+  display: block;
+  max-width: 66rem;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  width: 1.4rem;
+  height: 2.2rem;
+  border: none;
+}
+.player.paused .player__start::after, .player.paused .player__start::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  background: #626262;
+}
+.player.paused .player__start::after {
+  right: 0;
+}
+.player.paused .player__start::before {
+  left: 0;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../../images/decor/player-splashsreen.png") center center/cover no-repeat;
+  cursor: pointer;
+}
+.player__splash::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background: url("../../../images/symbol/play.svg") center center no-repeat;
+  width: 4.8rem;
+  height: 7rem;
+  transform: translate(-50%, -50%);
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2.5rem;
+}
+
+.player__start {
+  width: 1.4rem;
+  height: 2.2rem;
+  border: none;
+  outline: none;
+  background: url("../../../images/symbol/play.svg") center center no-repeat;
+}
+
+.player__duration {
+  font-size: 1.6rem;
+}
+
+.player__volume {
+  height: 16px;
+  width: 10%;
+  position: relative;
+}
+.player__volume::before {
+  display: block;
+  content: "";
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #333;
+  transform: translateY(-50%);
+}
+.player__volume-button {
+  background: #626262;
+  border-radius: 50px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .order {

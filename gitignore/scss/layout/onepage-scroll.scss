@@ -1,0 +1,118 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+}
+
+.onepage-wrapper .section {
+  width: 100%;
+//   height: 100%;
+}
+
+.onepage-pagination {
+    position: fixed;
+    top: 47%;
+    right: 13.5%;
+    z-index: 100;
+}
+
+.onepage-pagination li {
+    width: 1.8rem;
+    height: 1.8rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 0.3rem;
+    border: 0.1rem solid transparent;
+    border-radius: 50%;
+    position: relative;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.onepage-pagination li a{
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: #292929;
+    opacity: 0.6;
+    transition: 0.3;  
+
+    &:hover {
+        background: #E01F3D;
+        opacity: 1;
+    }
+}
+
+.onepage-pagination li a.active{    
+    background: #E01F3D;
+    opacity: 1;    
+}
+
+.onepage-pagination li a.active::before {
+    width: 1.8rem;
+    height: 1.8rem; 
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;    
+    border: 0.1rem solid #E01F3D;
+    border-radius: 50%;
+
+}    
+
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+  overflow: auto;
+}
+
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%;
+}
+
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit;
+}

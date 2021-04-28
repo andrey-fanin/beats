@@ -13,6 +13,18 @@
         margin-bottom: 3.8rem;
         font-size: 1.8rem;
     }    
+
+    &.error-modal {
+        color: red;
+    }
+
+    &.fancybox-content {
+        padding: 0 !important;
+    }
+
+    &.fancybox-button {
+        display: none;
+    }
 }
 
 .modal__container {

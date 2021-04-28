@@ -485,6 +485,32 @@
                     </ul>
                 </div>
             </section>      
+            <section class="player-section">
+                <div class="container container__player">
+                    <h2 class="player-section__title">Как мы работаем</h2>
+                    <div class="player active">
+                        <div class="player__content">
+                            <div class="player__elem" id="yt-player"></div>
+                            <div class="player__splash"></div>
+                        </div>
+                        <div class="player__controls">
+                            <button class="player__start">
+                                <img src="./images/symbol/play.svg" alt="">
+                            </button>
+                            <div class="player__playback">
+                                <div class="player__playback-button"></div>
+                            </div>
+                            <div class="player__duration">
+                                <span class="player__duration-completed">0:00</span>  :
+                                <span class="player__duration-estimate">0:00</span>
+                            </div>
+                            <div class="player__volume">
+                                <button class="player__volume-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="order">
                 <div class="container container__order">
                     <h2 class="order__title">Закажите доставку</h2>
@@ -680,7 +706,7 @@
             </use>
         </svg>
     </a>   
-    <section class="burger-menu">
+    <div class="burger-menu">
         <div class="container container__burger-menu">
             <ul class="burger-menu__list">
                 <li class="burger-menu__item"><a href="#" class="burger-menu__link">О нас</a></li>
@@ -692,12 +718,11 @@
                 <li class="burger-menu__item"><a href="#" class="burger-menu__link">Контакты</a></li>
             </ul>
         </div>
-    </section>     
+    </div>     
     <script src="./scripts/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="./scripts/jquery.onepage-scroll.js"></script>
-    <script>$(".main").onepage_scroll();</script>
     <script src="./scripts/burger.js"></script>
     <script src="./scripts/accordion-vertical.js"></script>
     <script src="./scripts/accordion-horizontal.js"></script>
@@ -705,5 +730,7 @@
     <script src="./scripts/order-form.js"></script>
     <script src="./scripts/slideshow.js"></script>
     <script src="./scripts/modal.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./scripts/player.js"></script>
 </body>
 </html>
