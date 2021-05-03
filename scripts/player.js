@@ -150,13 +150,13 @@ let eventsInit = () => {
 
         const clickedPosition = e.originalEvent.layerX;
         const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-        const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+        const newPlaybackPositionSec = (vid.duration() / 100) * newButtonPositionPercent;
 
         $('.player__playback-button').css({
             left: `${newButtonPositionPercent}%`
         });
 
-        player.seekTo(newPlaybackPositionSec);
+        player.seeking(newPlaybackPositionSec);
     })
     
     $('.player__volume').click(e => {
@@ -195,7 +195,7 @@ const formatTime = timeSec => {
 
 const onPlayerReady = () => {
     let interval;
-    const durationSec = player.getDuration();
+    const durationSec = vid.duration();
 
     $('.player__duration-estimate').text(formatTime(durationSec));
 
@@ -204,7 +204,7 @@ const onPlayerReady = () => {
     }
 
     interval = setInterval(() => {
-        const completedSec = player.getCurrentTime();
+        const completedSec = vid.currentTime();
         const completedPercent = (completedSec / durationSec) * 100;
 
         $('.player__playback-button').css({                     // полоска прокрутки двигается параллельно текущей точке видео
