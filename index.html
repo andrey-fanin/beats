@@ -411,22 +411,37 @@
                     <h2 class="colors__title">Цвета</h2>
                     <ul class="colors__list">
                         <li class="colors__item">
-                            <div class="colors__item-title colors__item-title--silver">«Атласное серебро»
+                            <a class="colors__item-title colors__item-title--silver">«Атласное серебро»
+                            </a>
+                            <div class="colors__item-content">
+                                <div class="colors__item-container">
+                                    <button class="colors__item-close"><img src="./images/symbol/closer.svg" alt="closer" class="colors-item__close-icon"></button>
+                                    <p class="colors__item-descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                                        Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                                </div>
                             </div>
-                            <p class="colors__descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
                         </li>
                         <li class="colors__item">
-                            <div class="colors__item-title colors__item-title--black">«Чёрный матовый»
+                            <a class="colors__item-title colors__item-title--black">«Чёрный матовый»
+                            </a>
+                            <div class="colors__item-content">
+                                <div class="colors__item-container">
+                                    <button class="colors__item-close"><img src="./images/symbol/closer.svg" alt="closer" class="colors-item__close-icon"></button>
+                                    <p class="colors__item-descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                                    Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                                </div>
                             </div>
-                            <p class="colors__descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
                         </li>
                         <li class="colors__item">
-                            <div class="colors__item-title colors__item-title--red">«Красный цитрус»
+                            <a class="colors__item-title colors__item-title--red">«Красный цитрус»
+                            </a>
+                            <div class="colors__item-content">
+                                <div class="colors__item-container">
+                                    <button class="colors__item-close"><img src="./images/symbol/closer.svg" alt="closer" class="colors-item__close-icon"></button>
+                                    <p class="colors__item-descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                                        Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
+                                </div>
                             </div>
-                            <p class="colors__descr">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
                         </li>
                     </ul>
                 </div>
@@ -488,10 +503,11 @@
             <section class="player-section">
                 <div class="container container__player">
                     <h2 class="player-section__title">Как мы работаем</h2>
-                    <div class="player active">
+                    <div class="player">
                         <div class="player__content">
-                            <div class="player__elem" id="yt-player"></div>
-                            <div class="player__splash"></div>
+                            <video id="myvideo" width="480" height="270" poster="./images/decor/player-splashsreen.png">
+                                <source src="./images/miami-meme.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+                            </video>
                         </div>
                         <div class="player__controls">
                             <button class="player__start">
@@ -503,6 +519,9 @@
                             <div class="player__duration">
                                 <span class="player__duration-completed">0:00</span>  :
                                 <span class="player__duration-estimate">0:00</span>
+                            </div>                            
+                            <div class="player__volume-svg" id="dynamic">
+                                <img src="./images/symbol/volume.svg" alt="" class="">
                             </div>
                             <div class="player__volume">
                                 <button class="player__volume-button"></button>
@@ -598,7 +617,7 @@
                 </div>
             </section>   
             <section class="map">
-                <div class="container container__map">
+                <div class="container container__map" id="map">
                     <div class="map__content">
                         <img src="./images/bg/map.png" alt="Map" class="map__content-img">
                     </div>
@@ -732,5 +751,7 @@
     <script src="./scripts/modal.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./scripts/player.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="./scripts/map.js"></script>
 </body>
 </html>

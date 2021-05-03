@@ -56,6 +56,7 @@ p {
 }
 
 section {
+  height: 100%;
   display: flex;
 }
 
@@ -466,6 +467,118 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 400ms;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+}
+
+.onepage-wrapper .section {
+  width: 100%;
+}
+
+.onepage-pagination {
+  position: fixed;
+  top: 47%;
+  right: 13.5%;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .onepage-pagination {
+    display: none;
+  }
+}
+
+.onepage-pagination li {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+  border: 0.1rem solid transparent;
+  border-radius: 50%;
+  position: relative;
+}
+.onepage-pagination li:last-child {
+  margin-bottom: 0;
+}
+
+.onepage-pagination li a {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #292929;
+  opacity: 0.6;
+  transition: 0.3;
+}
+.onepage-pagination li a:hover {
+  background: #E01F3D;
+  opacity: 1;
+}
+
+.onepage-pagination li a.active {
+  background: #E01F3D;
+  opacity: 1;
+}
+
+.onepage-pagination li a.active::before {
+  width: 1.8rem;
+  height: 1.8rem;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 0.1rem solid #E01F3D;
+  border-radius: 50%;
+}
+
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+  overflow: auto;
+}
+
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.disabled-onepage-scroll .onepage-wrapper {
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%;
+}
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit;
 }
 
 .header {
@@ -1187,27 +1300,63 @@ template {
   background: #E01F3D;
 }
 
-.colors__descr {
+.colors__item-container, .colors__item-content {
   padding: 0;
   max-width: 0rem;
+  transition: 0.4s;
+}
+
+.colors__item-content {
+  background: rgba(51, 53, 55, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.colors__item-descr {
   writing-mode: lr-tb;
-  transform: rotate(180deg);
+  max-width: 0rem;
   font-family: Alegreya Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 150%;
-  background: rgba(51, 53, 55, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  overflow: hidden;
+  transform: rotate(180deg);
   transition: 0.4s;
 }
 
-.colors__item--active > .colors__descr {
-  padding: 3.1rem 5.3rem 3.1rem 3.8rem;
+.colors__item--active .colors__item-content {
   max-width: 43rem;
 }
+.colors__item--active .colors__item-container {
+  max-width: 43rem;
+  padding: 3.1rem 5.3rem 3.1rem 3.8rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.colors__item--active .colors__item-descr {
+  max-width: 43rem;
+}
+
+.colors__item-close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+
+.colors-item__close-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: 0.3s;
+}
+.colors-item__close-icon:hover {
+  filter: opacity(0.3);
+}
+
 .team {
   padding: 7.3rem 0 5.1rem;
 }
@@ -1582,7 +1731,7 @@ template {
 
 .player__playback {
   height: 16px;
-  width: 65%;
+  width: 46%;
   position: relative;
 }
 .player__playback::before {
@@ -1597,7 +1746,7 @@ template {
   transform: translateY(-50%);
 }
 .player__playback-button {
-  background: #626262;
+  background: #E01F3D;
   border-radius: 50px;
   border: none;
   width: 12px;
@@ -1700,15 +1849,16 @@ template {
   transform: translateY(-50%);
 }
 .player__volume-button {
-  background: #626262;
+  background: #E01F3D;
   border-radius: 50px;
   border: none;
   width: 12px;
   height: 12px;
   padding: 0;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
+  transform: translate(0, -50%);
 }
 
 .order {
@@ -2073,7 +2223,7 @@ template {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 18%;
   width: 100%;
 }
 .footer__col {
