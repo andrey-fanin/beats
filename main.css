@@ -1321,6 +1321,16 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   transform: rotate(180deg);
   max-height: 100%;
 }
+@media screen and (max-width: 768px) {
+  .colors__item {
+    max-height: 90rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .colors__item {
+    max-height: 84rem;
+  }
+}
 
 .colors__item-title {
   padding: 3.4rem 3rem;
@@ -1371,18 +1381,23 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   transform: rotate(180deg);
   transition: 0.4s;
 }
+@media screen and (max-width: 480px) {
+  .colors__item-descr {
+    font-size: 2.1rem;
+  }
+}
 
 .colors__item--active .colors__item-content {
   max-width: 43rem;
 }
 @media screen and (max-width: 768px) {
   .colors__item--active .colors__item-content {
-    max-width: calc(76.8rem - 10.2rem * 3);
+    max-width: calc(100vw - 10rem * 3);
   }
 }
 @media screen and (max-width: 480px) {
   .colors__item--active .colors__item-content {
-    max-width: calc(64rem - 12rem * 3);
+    max-width: calc(100vw - 11rem * 3);
   }
 }
 .colors__item--active .colors__item-container {
@@ -1394,12 +1409,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 @media screen and (max-width: 768px) {
   .colors__item--active .colors__item-container {
-    max-width: calc(76.8rem - 10.2rem * 3);
+    max-width: calc(100vw - 10rem * 3);
   }
 }
 @media screen and (max-width: 480px) {
   .colors__item--active .colors__item-container {
-    max-width: calc(64rem - 12rem * 3);
+    max-width: calc(100vw - 11rem * 3);
   }
 }
 .colors__item--active .colors__item-descr {
@@ -1407,12 +1422,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 @media screen and (max-width: 768px) {
   .colors__item--active .colors__item-descr {
-    max-width: calc(76.8rem - 10.2rem * 3);
+    max-width: calc(100vw - 10rem * 3);
   }
 }
 @media screen and (max-width: 480px) {
   .colors__item--active .colors__item-descr {
-    max-width: calc(64rem - 12rem * 3);
+    max-width: calc(100vw - 11rem * 3);
   }
 }
 
